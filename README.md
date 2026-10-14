@@ -4,49 +4,53 @@
 
 > ⚠️ **Proyecto en preparación.** Este sitio tiene carácter demostrativo. No se ha concedido financiación de la Unión Europea. Convocatoria de referencia: I3-2026-INV2a.
 
-## Estado actual — Fase 1
+## Estado actual — Fase 4 completada
 
-La Fase 1 mejora la sección tecnológica con arquitectura, evidencias y seguridad:
+El proyecto ha completado las cuatro fases de desarrollo:
 
-- **Arquitectura de referencia modular** de cinco capas (datos, RAG, razonamiento, supervisión, entrega)
-- **Etiquetas de madurez** inequívocas: concepto, prototipo, demostrado, implementado, comercial
-- **Modelo de evidencias TRL** con campos vacíos cuando no hay documentación publicable
-- **Lista de aceptación técnica** con criterios medibles pendientes de verificar
-- **Página de seguridad** con supervisión humana, privacidad y respuesta a incidentes
-- **Diferenciación** entre producto comercial maduro de terceros y personalización local
-- **Procedencia de modelos** y APIs de terceros sin exponer credenciales
-- **DGX B200** presentado exclusivamente como estudio de viabilidad
-- **Sin imágenes de servidores** como equipamiento existente
-- Landing page con misión, alcance, región y estado
-- Ruta de cinco fases (0–4) con navegación bidireccional
-- Páginas de tecnología, seguridad, inversión, visión y transparencia
-- Datos canónicos centralizados en `data/project.json`
-- Diseño responsive (320px a 1920px) y accesible (WCAG AA)
-- Aviso visible de proyecto en preparación
-- Sin datos inventados: socios, TRL, financiación o compromisos
+- **Fase 0**: Fundamentos y cohesión — Landing, rutas 0-4, datos canónicos
+- **Fase 1**: Tecnología preparada — Arquitectura, evidencias TRL, seguridad
+- **Fase 2**: Inversión interregional — Presupuestos trazables, simulador local
+- **Fase 3**: Mercado y monetización — Oferta hipotética, IP, casos simulados
+- **Fase 4**: Continuidad y escalado — Sostenibilidad, escenarios, auditoría final
 
 ## Estructura del proyecto
 
 ```
+├── .github/
+│   └── workflows/
+│       └── ci.yml               # GitHub Actions CI/CD
 ├── data/
-│   └── project.json          # Fuente única de datos canónicos
+│   └── project.json             # Fuente única de datos canónicos
+├── docs/
+│   ├── PUBLISHING_GUIDE.md      # Guía de publicación segura
+│   └── PR_CHECKLIST.md          # Checklist de revisión PR
 ├── public/
-│   └── favicon.svg           # Marca gráfica propia tricolor
+│   ├── favicon.svg              # Marca gráfica propia tricolor
+│   ├── robots.txt               # Control de crawlers
+│   └── _redirects               # Redirecciones para Vercel
 ├── src/
-│   ├── App.tsx               # Router principal (HashRouter)
-│   ├── main.tsx              # Punto de entrada React
-│   ├── index.css             # Estilos y tokens de color
+│   ├── App.tsx                  # Router principal (HashRouter)
+│   ├── main.tsx                 # Punto de entrada React
+│   ├── index.css                # Estilos y tokens de color
 │   ├── components/
-│   │   └── Layout.tsx        # Cabecera, navegación, pie de página
+│   │   └── Layout.tsx           # Cabecera, navegación, pie de página
 │   └── pages/
-│       ├── Home.tsx           # Landing page
-│       ├── StagePage.tsx      # Páginas de fases 0–4
-│       ├── Technology.tsx     # Ecosistema tecnológico y arquitectura
-│       ├── Security.tsx       # Seguridad y gobernanza de IA
-│       ├── Investment.tsx     # Presupuesto e inversión
-│       ├── Vision.tsx         # Visión industrial AION ZERO
-│       └── Transparency.tsx   # Transparencia y fuentes
-├── index.html                 # HTML base con SEO
+│       ├── Home.tsx             # Landing page
+│       ├── StagePage.tsx        # Páginas de fases 0–4
+│       ├── Technology.tsx       # Ecosistema tecnológico y arquitectura
+│       ├── Security.tsx         # Seguridad y gobernanza de IA
+│       ├── Investment.tsx       # Presupuesto e inversión
+│       ├── Commercial.tsx       # Comercialización y propiedad intelectual
+│       ├── Continuity.tsx       # Continuidad y escalado post-subvención
+│       ├── Vision.tsx           # Visión industrial AION ZERO
+│       └── Transparency.tsx     # Transparencia y fuentes
+├── CHANGELOG.md                 # Historial de cambios
+├── FASE1_ENTREGA.md             # Documento de entrega Fase 1
+├── FASE2_ENTREGA.md             # Documento de entrega Fase 2
+├── FASE3_ENTREGA.md             # Documento de entrega Fase 3
+├── FASE4_ENTREGA.md             # Documento de entrega Fase 4
+├── index.html                   # HTML base con SEO
 ├── package.json
 ├── tsconfig.json
 └── vite.config.js
@@ -63,9 +67,72 @@ npm run dev
 
 # Compilar para producción
 npm run build
+
+# Verificar tipos TypeScript
+npm run typecheck
 ```
 
 El proyecto se levanta en `http://localhost:3000`.
+
+## Despliegue
+
+### Vercel (recomendado)
+
+1. **Importar repositorio** en [vercel.com](https://vercel.com)
+2. **Configuración automática**:
+   - Framework preset: Vite
+   - Build command: `npm run build`
+   - Output directory: `dist`
+3. **Variables de entorno**: No se necesitan
+4. **Dominio**: Configurar dominio propio cuando esté registrado
+5. **Despliegue**: Automático en push a main
+
+### GitHub Pages
+
+1. **Configurar GitHub Actions** (ya incluido en `.github/workflows/ci.yml`)
+2. **Añadir workflow de despliegue** a gh-pages:
+
+```yaml
+# Añadir a .github/workflows/ci.yml
+deploy:
+  needs: build-and-test
+  runs-on: ubuntu-latest
+  if: github.ref == 'refs/heads/main'
+  steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: dist
+        path: dist/
+    - uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+```
+
+3. **El proyecto usa HashRouter** para compatibilidad con subdirectorios
+4. **Acceder a**: `https://usuario.github.io/repositorio/`
+
+### Instrucciones paso a paso
+
+```bash
+# 1. Crear repositorio en GitHub
+gh repo create montemolin-aihub --public --clone
+cd montemolin-aihub
+
+# 2. Copiar archivos del proyecto
+# (o hacer clone si ya existe)
+
+# 3. Push inicial
+git add .
+git commit -m "Initial commit: MONTEMOLIN-AIHUB Fase 4"
+git push -u origin main
+
+# 4. Conectar a Vercel
+# Ir a vercel.com/new y seleccionar el repositorio
+
+# 5. O configurar GitHub Pages
+# Settings → Pages → Source: GitHub Actions
+```
 
 ## Edición de contenido
 
@@ -74,25 +141,10 @@ Todos los datos factuales se encuentran en `data/project.json`. Para modificar c
 1. Editar `data/project.json`
 2. Las páginas leen de este archivo automáticamente
 3. Verificar que el build sigue funcionando: `npm run build`
+4. Actualizar `CHANGELOG.md`
+5. Hacer commit y push
 
-**Regla:** No duplicar cifras en componentes. Si necesitas una nueva propiedad, añádela al JSON con unidad, procedencia, fecha y estatus.
-
-## Despliegue
-
-### Vercel
-
-1. Importar el repositorio en Vercel
-2. Framework preset: Vite
-3. Build command: `npm run build`
-4. Output directory: `dist`
-5. No se necesitan variables de entorno ni secretos
-
-### GitHub Pages
-
-El proyecto usa `HashRouter` para compatibilidad con subdirectorios. Para desplegar:
-
-1. Configurar GitHub Actions con `base` en `vite.config.js` si es necesario
-2. O usar un workflow que publique `dist/` en la rama `gh-pages`
+**Regla**: No duplicar cifras en componentes. Si necesitas una nueva propiedad, añádela al JSON con unidad, procedencia, fecha y estatus.
 
 ## Identidad visual
 
@@ -111,6 +163,9 @@ No se utilizan logotipos institucionales de la UE, Junta de Extremadura u otras 
 - Las relaciones con ACS, Telefónica, Santander y Junta son **candidatas a explorar**, no socios confirmados
 - ARCHEION, SAE y JOULE **no se presentan como TRL 6 verificado**
 - La gigafactoría AION ZERO es una **visión industrial separada** del proyecto I3
+- Todas las cifras deben tener etiqueta de estado (escenario/objetivo/hipótesis/pendiente/verificado)
+
+Ver [docs/PUBLISHING_GUIDE.md](docs/PUBLISHING_GUIDE.md) para más detalles.
 
 ## Accesibilidad
 
@@ -123,11 +178,46 @@ No se utilizan logotipos institucionales de la UE, Junta de Extremadura u otras 
 - Respeto a `prefers-reduced-motion`
 - Menú móvil con `aria-expanded`
 - `details`/`summary` nativos para FAQ
+- SVG con `aria-label` descriptivo
+
+## Páginas del sitio
+
+1. **Inicio** (`/`) — Landing con misión, métricas y fases
+2. **Fases** (`/fases/0` a `/fases/4`) — Detalle de cada fase
+3. **Tecnología** (`/tecnologia`) — Arquitectura y componentes
+4. **Seguridad** (`/seguridad`) — Gobernanza de IA
+5. **Inversión** (`/inversion`) — Presupuesto y simulador
+6. **Comercialización** (`/comercializacion`) — Oferta hipotética e IP
+7. **Continuidad** (`/continuidad`) — Sostenibilidad post-subvención
+8. **Visión** (`/vision`) — AION ZERO y gigafactoría
+9. **Transparencia** (`/transparencia`) — Fuentes y estado de datos
+
+## Documentación adicional
+
+- [CHANGELOG.md](CHANGELOG.md) — Historial de cambios
+- [docs/PUBLISHING_GUIDE.md](docs/PUBLISHING_GUIDE.md) — Guía de publicación segura
+- [docs/PR_CHECKLIST.md](docs/PR_CHECKLIST.md) — Checklist de revisión PR
+- [FASE1_ENTREGA.md](FASE1_ENTREGA.md) — Documento de entrega Fase 1
+- [FASE2_ENTREGA.md](FASE2_ENTREGA.md) — Documento de entrega Fase 2
+- [FASE3_ENTREGA.md](FASE3_ENTREGA.md) — Documento de entrega Fase 3
+- [FASE4_ENTREGA.md](FASE4_ENTREGA.md) — Documento de entrega Fase 4
+
+## Contribuir
+
+Antes de hacer un PR, revisa [docs/PR_CHECKLIST.md](docs/PR_CHECKLIST.md).
+
+1. Fork el repositorio
+2. Crea una rama: `git checkout -b feature/nueva-funcionalidad`
+3. Commit cambios: `git commit -m 'Añadir nueva funcionalidad'`
+4. Push: `git push origin feature/nueva-funcionalidad`
+5. Abre un Pull Request
 
 ## Licencia
 
 Este repositorio es una propuesta demostrativa. La propiedad intelectual del software y servicios es materia de inventario y acuerdos reales.
 
-## Fase siguiente
+---
 
-La Fase 2 abordará inversión interregional, pilotos empresariales y cadena de valor, partiendo de esta base tecnológica y de seguridad.
+**Última actualización**: Fase 4 (2026)
+**Estado**: Listo para desplegar (pendiente de configuración de dominio y despliegue)
+**Versión**: 0.4.0
