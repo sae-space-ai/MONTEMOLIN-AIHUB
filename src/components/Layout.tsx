@@ -37,7 +37,10 @@ export default function Layout() {
     { to: '/', label: 'Inicio' },
     { to: '/fases/0', label: 'Fases' },
     { to: '/tecnologia', label: 'Tecnología' },
+    { to: '/seguridad', label: 'Seguridad' },
     { to: '/inversion', label: 'Inversión' },
+    { to: '/comercializacion', label: 'Comercialización' },
+    { to: '/continuidad', label: 'Continuidad' },
     { to: '/vision', label: 'Visión' },
     { to: '/transparencia', label: 'Transparencia' },
   ];

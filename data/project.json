@@ -155,27 +155,174 @@
       "name": "ARCHEION",
       "tag": "Evidencia y trazabilidad",
       "text": "Línea de trabajo para procedencia de información, verificación documental y evidencias auditables.",
-      "status": "Desarrollo propio; TRL 6 no acreditado"
+      "status": "Desarrollo propio; TRL 6 no acreditado",
+      "maturity": "concepto",
+      "maturityLabel": "Concepto / Prototipo interno",
+      "capabilities": [
+        "Registro de procedencia de documentos",
+        "Hash de integridad y cadena de custodias",
+        "Exportación de evidencias en formatos abiertos"
+      ],
+      "thirdPartyDeps": "Almacenamiento y bases de datos de terceros; licencias por verificar",
+      "evidenceStatus": "Sin evaluación independiente; pruebas internas documentadas"
     },
     {
       "name": "SAE",
       "tag": "Gobernanza de IA",
       "text": "Evaluación, seguimiento y supervisión humana de sistemas de IA y sus resultados.",
-      "status": "Integración y madurez pendientes de verificación"
+      "status": "Integración y madurez pendientes de verificación",
+      "maturity": "prototipo",
+      "maturityLabel": "Prototipo / Integración pendiente",
+      "capabilities": [
+        "Panel de supervisión humana (human-in-the-loop)",
+        "Registro de decisiones y justificación",
+        "Alertas de desviación y umbrales configurables"
+      ],
+      "thirdPartyDeps": "Modelos de evaluación de terceros; términos de uso por revisar",
+      "evidenceStatus": "Madurez de integración no acreditada"
     },
     {
       "name": "JOULE",
       "tag": "Eficiencia computacional",
       "text": "Optimización de costes, latencia y recursos de aplicaciones de inteligencia artificial.",
-      "status": "Prototipos y ensayos; mejoras reales por confirmar"
+      "status": "Prototipos y ensayos; mejoras reales por confirmar",
+      "maturity": "prototipo",
+      "maturityLabel": "Prototipo / Ensayos en curso",
+      "capabilities": [
+        "Perfilado de consumo de recursos",
+        "Selección automática de modelos según coste",
+        "Caché y reutilización de inferencias"
+      ],
+      "thirdPartyDeps": "Dependiente de APIs de modelos de terceros; sin cifras de ahorro verificadas",
+      "evidenceStatus": "Mejoras reales por confirmar con pruebas externas"
     },
     {
       "name": "CESAC AI",
       "tag": "Adopción y capacidades",
       "text": "Formación, transferencia tecnológica y servicios para empresas y profesionales.",
-      "status": "Oferta comercial y operaciones en definición"
+      "status": "Oferta comercial y operaciones en definición",
+      "maturity": "concepto",
+      "maturityLabel": "Concepto / Oferta en definición",
+      "capabilities": [
+        "Programas de capacitación en IA empresarial",
+        "Transferencia tecnológica a pymes",
+        "Servicios de diagnóstico y acompañamiento"
+      ],
+      "thirdPartyDeps": "Materiales formativos propios y de terceros por identificar",
+      "evidenceStatus": "Oferta comercial y operaciones en definición"
     }
   ],
+  "architecture": {
+    "title": "Arquitectura de referencia prevista",
+    "description": "Diseño modular de cinco capas para una solución empresarial de IA confiable. Cada capa tiene responsabilidades definidas y puede integrarse con componentes de terceros maduros (TRL 6+) o con desarrollo propio en validación.",
+    "layers": [
+      {
+        "id": "data",
+        "name": "Capa de datos",
+        "description": "Ingesta, normalización y almacenamiento de documentos. Incluye conectores para fuentes empresariales y control de acceso.",
+        "status": "Arquitectura prevista",
+        "components": "Conectores, ETL, almacén documental"
+      },
+      {
+        "id": "retrieval",
+        "name": "Capa de recuperación (RAG)",
+        "description": "Indexación vectorial y búsqueda semántica para respuestas fundamentadas en documentos reales. Las respuestas incluyen referencias trazables.",
+        "status": "Arquitectura prevista",
+        "components": "Embeddings, índice vectorial, retriever"
+      },
+      {
+        "id": "reasoning",
+        "name": "Capa de razonamiento",
+        "description": "Modelos de lenguaje para generación, clasificación y extracción. Se utilizarán productos comerciales maduros de terceros cuando sea posible, complementados con personalización local.",
+        "status": "Arquitectura prevista",
+        "components": "LLM de terceros, prompts, orquestación"
+      },
+      {
+        "id": "supervision",
+        "name": "Capa de supervisión",
+        "description": "Control humano, registro de decisiones, evaluación de calidad y detección de desviaciones. Intervención obligatoria en decisiones críticas.",
+        "status": "Arquitectura prevista",
+        "components": "SAE, paneles, alertas, logs"
+      },
+      {
+        "id": "delivery",
+        "name": "Capa de entrega",
+        "description": "APIs, interfaces y canales de distribución a las empresas. Incluye trazabilidad de uso, facturación y métricas de adopción.",
+        "status": "Arquitectura prevista",
+        "components": "API REST, dashboards, integraciones"
+      }
+    ]
+  },
+  "evidenceModel": {
+    "title": "Modelo de evidencias TRL",
+    "description": "Para que un componente se considere TRL 6 o superior, se requiere documentación verificable con los siguientes campos. Los campos vacíos indican evidencia pendiente.",
+    "fields": [
+      { "name": "Versión de producto", "description": "Identificador único de la versión evaluada", "status": "pendiente" },
+      { "name": "Entorno relevante", "description": "Contexto operativo similar al de producción real", "status": "pendiente" },
+      { "name": "Protocolo de prueba", "description": "Metodología documentada y reproducible", "status": "pendiente" },
+      { "name": "Operador independiente", "description": "Evaluador externo sin conflicto de interés", "status": "pendiente" },
+      { "name": "Acta de resultados", "description": "Documento firmado con métricas y conclusiones", "status": "pendiente" },
+      { "name": "Fecha de evaluación", "description": "Momento de la verificación", "status": "pendiente" }
+    ]
+  },
+  "acceptanceCriteria": {
+    "title": "Lista de aceptación técnica",
+    "description": "Criterios medibles que deben cumplirse antes de desplegar en pilotos empresariales. Ninguno se considera superado sin prueba documentada.",
+    "items": [
+      { "category": "Precisión", "criterion": "Tasa de acierto medida en conjunto de prueba representativo", "status": "pendiente de medir" },
+      { "category": "Latencia", "criterion": "Tiempo de respuesta P95 en condiciones reales de uso", "status": "pendiente de medir" },
+      { "category": "Coste", "criterion": "Coste por inferencia o transacción documentado", "status": "pendiente de medir" },
+      { "category": "Control humano", "criterion": "Mecanismo de intervención humana operativo y probado", "status": "pendiente de verificar" },
+      { "category": "Evaluación", "criterion": "Protocolo de evaluación continua con métricas definidas", "status": "pendiente de definir" },
+      { "category": "Seguridad", "criterion": "Pruebas de penetración y auditoría de acceso completadas", "status": "pendiente de ejecutar" },
+      { "category": "Privacidad", "criterion": "Evaluación de impacto (DPIA) realizada cuando aplique", "status": "pendiente de realizar" },
+      { "category": "Trazabilidad", "criterion": "Registro completo de decisiones y procedencia de datos", "status": "pendiente de implementar" }
+    ]
+  },
+  "securityPillars": [
+    {
+      "name": "Límites de automatización",
+      "description": "Las decisiones con impacto significativo requieren intervención humana. Se definen umbrales de confianza por debajo de los cuales el sistema no actúa autónomamente.",
+      "status": "Diseño previsto; implementación pendiente"
+    },
+    {
+      "name": "Evaluación humana",
+      "description": "Panel de supervisión con capacidad de revisar, corregir y detener procesos. Registro de todas las intervenciones humanas.",
+      "status": "Diseño previsto; implementación pendiente"
+    },
+    {
+      "name": "Privacidad",
+      "description": "Minimización de datos, cifrado en tránsito y reposo, control de acceso basado en roles. Evaluación de impacto cuando sea preceptiva.",
+      "status": "Diseño previsto; DPIA pendiente"
+    },
+    {
+      "name": "Respuesta a incidentes",
+      "description": "Protocolo de detección, contención, comunicación y recuperación ante incidentes de seguridad o funcionamiento.",
+      "status": "Protocolo por definir; sin incidentes registrados"
+    }
+  ],
+  "thirdPartyModels": {
+    "title": "Procedencia de modelos y APIs de terceros",
+    "description": "La arquitectura prevista utiliza productos comerciales maduros de terceros cuando estén disponibles. Se documentan las condiciones de uso sin exponer credenciales.",
+    "note": "Las credenciales, claves API y tokens nunca se publican ni se almacenan en el repositorio.",
+    "categories": [
+      {
+        "type": "Modelos de lenguaje",
+        "description": "LLM comerciales con licencias de uso empresarial. Selección basada en coste, latencia y capacidades documentadas.",
+        "status": "Evaluación en curso; sin contratos firmados"
+      },
+      {
+        "type": "Embeddings y vectores",
+        "description": "Servicios de generación de embeddings y bases de datos vectoriales. Alternativas open-source consideradas.",
+        "status": "Evaluación en curso"
+      },
+      {
+        "type": "Almacenamiento",
+        "description": "Servicios de almacenamiento de documentos y objetos. Cifrado y control de acceso obligatorios.",
+        "status": "Evaluación en curso"
+      }
+    ]
+  },
   "metrics": [
     {
       "value": "30",
@@ -217,6 +364,550 @@
     "No hay constancia de acuerdos firmados con ACS, Telefónica, Banco Santander ni la Junta de Extremadura.",
     "Las 12 pymes, 25 empleos equivalentes a jornada completa, tres inversiones y 240 personas son objetivos de planificación, no resultados actuales.",
     "Los desarrollos ARCHEION, SAE y JOULE no se presentan como TRL 6 verificado.",
-    "La futura gigafactoría es una visión industrial independiente del alcance financiable I3."
-  ]
+    "La futura gigafactoría es una visión industrial independiente del alcance financiable I3.",
+    "No existen cifras de ahorro, reducción de costes o mejora de rendimiento verificadas sin pruebas externas.",
+    "No se ha adquirido ni instalado equipamiento DGX B200 u otro hardware de alto rendimiento.",
+    "Ninguna carta de intención o contrato se presenta como firmado si no lo está.",
+    "Las subvenciones regionales son contexto informativo, no transferencia atribuida al Hub."
+  ],
+  "regions": {
+    "title": "Regiones elegibles y composición del consorcio",
+    "description": "La convocatoria I3 requiere un consorcio con entidades de al menos tres regiones NUTS2 diferentes y dos países. La composición exacta está pendiente de confirmación.",
+    "leadRegion": {
+      "name": "Extremadura",
+      "nuts2": "ES43",
+      "country": "España",
+      "status": "Región sede prevista",
+      "classification": "Región menos desarrollada",
+      "role": "Coordinación territorial, pilotos locales, trazabilidad de gasto regional"
+    },
+    "partnerRegions": {
+      "description": "Regiones candidatas a explorar como socias. No hay acuerdos firmados.",
+      "minimumRequired": {
+        "regions": 3,
+        "countries": 2
+      },
+      "candidates": [
+        {
+          "note": "Por confirmar — se buscan regiones NUTS2 de al menos un país adicional a España",
+          "status": "pendiente",
+          "ris3Alignment": "por verificar"
+        }
+      ],
+      "criteria": [
+        "Elegibilidad según reglas I3 (entidad legal establecida en la región)",
+        "Coherencia con la estrategia RIS3/S3 de la región",
+        "Capacidad de contribuir con inversión empresarial o tecnológica",
+        "Compromiso documentado (no meramente verbal)"
+      ]
+    },
+    "importantNote": "La composición mínima de socios requiere varias regiones y países, no simplemente varios PIC (Participant Identification Code). Cada socio debe tener presencia real y capacidad operativa en su territorio."
+  },
+  "investmentCases": {
+    "title": "Tres casos de inversión modelo",
+    "description": "Modelos hipotéticos de casos de inversión que podrían desarrollarse si el proyecto se aprueba y se encuentran empresas participantes. Ninguno representa un compromiso actual.",
+    "cases": [
+      {
+        "id": "case-1",
+        "name": "IA documental para pymes agroalimentarias",
+        "sector": "Agroalimentación",
+        "description": "Implantación de sistemas de clasificación, trazabilidad y análisis documental en cooperativas y pymes del sector.",
+        "workpack": "WP3",
+        "expectedValue": [
+          "Reducción de tiempos de procesamiento documental",
+          "Trazabilidad de lotes y certificados",
+          "Automatización de controles de calidad"
+        ],
+        "regionalImpact": "Extremadura y regiones con sector agroalimentario significativo",
+        "status": "Caso modelo — sin empresa asignada",
+        "investmentRange": "Por definir según alcance real"
+      },
+      {
+        "id": "case-2",
+        "name": "Automatización supervisada en manufactura",
+        "sector": "Manufactura industrial",
+        "description": "Sistemas de IA con supervisión humana para control de calidad, mantenimiento predictivo y optimización de procesos.",
+        "workpack": "WP3 · WP4",
+        "expectedValue": [
+          "Detección temprana de anomalías",
+          "Reducción de paradas no planificadas",
+          "Registro auditables de decisiones"
+        ],
+        "regionalImpact": "Regiones con tejido industrial manufacturero",
+        "status": "Caso modelo — sin empresa asignada",
+        "investmentRange": "Por definir según alcance real"
+      },
+      {
+        "id": "case-3",
+        "name": "Implantaciones sectoriales en servicios",
+        "sector": "Servicios profesionales",
+        "description": "Adaptación de soluciones de IA a sectores de servicios: legal, financiero, sanitario o administrativo.",
+        "workpack": "WP3 · WP4",
+        "expectedValue": [
+          "Asistencia documental con supervisión",
+          "Clasificación y extracción de información",
+          "Cumplimiento normativo con trazabilidad"
+        ],
+        "regionalImpact": "Diversas regiones según sector",
+        "status": "Caso modelo — sin empresa asignada",
+        "investmentRange": "Por definir según alcance real"
+      }
+    ]
+  },
+  "costCategories": {
+    "title": "Categorías de costes del proyecto",
+    "description": "Diferenciación entre tipos de costes según reglas de elegibilidad I3. Las cifras concretas por categoría están pendientes de consolidación.",
+    "categories": [
+      {
+        "name": "Costes directos elegibles",
+        "description": "Gastos directamente imputables al proyecto: personal, subcontratación, equipamiento, viajes",
+        "i3Rule": "Base para cálculo del 70 % de inversión empresarial",
+        "status": "Por consolidar"
+      },
+      {
+        "name": "Costes indirectos",
+        "description": "Gastos generales aplicables según porcentaje establecido por la convocatoria",
+        "i3Rule": "Reglas específicas de la convocatoria I3",
+        "status": "Por consolidar"
+      },
+      {
+        "name": "Equipamiento y depreciación",
+        "description": "Adquisición o uso de equipamiento. La depreciación se calcula según vida útil y uso real en el proyecto",
+        "i3Rule": "Solo la parte proporcional al proyecto es elegible",
+        "status": "Por consolidar"
+      },
+      {
+        "name": "Cofinanciación",
+        "description": "Aportaciones de socios o terceros para cubrir la parte no financiada por la UE",
+        "i3Rule": "Debe estar comprometida documentalmente",
+        "status": "Pendiente de identificar (4,2 M€)"
+      },
+      {
+        "name": "Financiación movilizada",
+        "description": "Inversión adicional de las empresas participantes más allá del presupuesto del proyecto",
+        "i3Rule": "No es subvención, es inversión privada",
+        "status": "Por cuantificar"
+      }
+    ],
+    "importantNote": "Calcular el 70 % sobre un monto no elegible no constituye ayuda autorizada. Las reglas I3 deben aplicarse sobre costes correctamente clasificados."
+  },
+  "partnerRoles": {
+    "title": "Roles posibles de los socios",
+    "description": "Descripción de responsabilidades que podrían asumir los socios del consorcio. No se atribuyen a candidatos específicos sin acuerdo documentado.",
+    "roles": [
+      {
+        "role": "Socio tecnológico",
+        "description": "Aporta capacidades de desarrollo, integración o validación tecnológica",
+        "responsibilities": [
+          "Desarrollo o adaptación de componentes de IA",
+          "Pruebas de integración y aceptación",
+          "Documentación técnica y de seguridad"
+        ],
+        "assignedTo": "Por confirmar"
+      },
+      {
+        "role": "Empresa industrial",
+        "description": "Participa como beneficiaria de implantación, aportando caso de uso y entorno operativo",
+        "responsibilities": [
+          "Definición de necesidades y criterios de aceptación",
+          "Cesión de entorno operativo para pilotos",
+          "Validación de resultados y adopción"
+        ],
+        "assignedTo": "Por confirmar"
+      },
+      {
+        "role": "Entidad regional",
+        "description": "Organismo público o semi-público que aporta contexto territorial, conexión con pymes y alineación RIS3",
+        "responsibilities": [
+          "Alineación con estrategia RIS3/S3 regional",
+          "Conexión con tejido empresarial local",
+          "Apoyo a la difusión y transferencia"
+        ],
+        "assignedTo": "Por confirmar"
+      }
+    ]
+  },
+  "i3rules": {
+    "title": "Reglas de inversión I3 aplicables",
+    "description": "Umbrales mínimos que deben verificarse con el texto vigente de la convocatoria. Los porcentajes son reglas a comprobar, no certificaciones del proyecto.",
+    "rules": [
+      {
+        "rule": "70 % de costes directos elegibles destinados a inversiones empresariales",
+        "description": "La mayor parte del presupuesto debe beneficiar directamente a empresas que invierten en implantación",
+        "verification": "Pendiente de verificar con texto de convocatoria y clasificación de costes",
+        "warning": "Calcular este porcentaje sobre montos no elegibles no constituye ayuda autorizada"
+      },
+      {
+        "rule": "50 % de costes elegibles en regiones menos desarrolladas",
+        "description": "Al menos la mitad del gasto elegible debe realizarse en regiones NUTS2 clasificadas como menos desarrolladas",
+        "verification": "Extremadura (ES43) es región menos desarrollada; otras regiones del consorcio por clasificar",
+        "warning": "La clasificación debe verificarse con datos oficiales de Eurostat"
+      }
+    ]
+  },
+  "doubleFunding": {
+    "title": "Principio de no doble financiación",
+    "description": "Los mismos costes no pueden ser financiados simultáneamente por fondos de la UE y fondos autonómicos/nacionales para el mismo concepto.",
+    "principles": [
+      "Cada coste se imputa a una única fuente de financiación",
+      "Se lleva registro de ayudas recibidas por beneficiario y concepto",
+      "Las subvenciones regionales son contexto informativo, no transferencia atribuida al Hub",
+      "En caso de solapamiento, se aplica la norma más restrictiva"
+    ],
+    "regionalContext": "Las ayudas autonómicas existentes en Extremadura u otras regiones son contexto informativo. No se presentan como transferencia atribuida al proyecto I3."
+  },
+  "dgxStudy": {
+    "title": "Estudio DGX B200 — Referencia técnica y financiera",
+    "description": "La posible incorporación de equipamiento NVIDIA DGX B200 (o equivalente) se analiza como referencia técnica y financiera, separada del coste subvencionable.",
+    "nature": "Estudio de alternativa, no adquisición realizada",
+    "separation": "Este estudio es independiente del presupuesto subvencionable I3. Cualquier inversión en equipamiento se clasificará según reglas de elegibilidad.",
+    "considerations": [
+      "Coste de adquisición vs. alquiler cloud",
+      "Vida útil y depreciación aplicable",
+      "Consumo energético y requisitos de infraestructura",
+      "Adecuación a casos de uso previstos",
+      "Alternativas open-source y multi-proveedor"
+    ],
+    "status": "Estudio en fase preliminar"
+  },
+  "letterOfIntent": {
+    "title": "Procedimiento de cartas de intención y contratos",
+    "description": "Las cartas de intención no son compromisos vinculantes. Solo los contratos firmados constituyen compromiso real.",
+    "process": [
+      {
+        "step": "Identificación de interés",
+        "description": "Contacto inicial y exploración de necesidades"
+      },
+      {
+        "step": "Carta de intención",
+        "description": "Documento no vinculante que expresa interés en participar si el proyecto se aprueba"
+      },
+      {
+        "step": "Negociación de términos",
+        "description": "Definición de alcance, aportaciones y contraprestaciones"
+      },
+      {
+        "step": "Contrato firmado",
+        "description": "Acuerdo vinculante con obligaciones y derechos documentados"
+      }
+    ],
+    "warning": "Ninguna carta de intención se presenta en este sitio como contrato firmado. Los documentos privados no se publican.",
+    "currentStatus": "No hay cartas de intención ni contratos firmados publicados"
+  },
+  "pymeSelection": {
+    "title": "Criterios de selección de pymes",
+    "description": "Las pymes participantes se seleccionarán según criterios objetivos y verificables. El objetivo de 12 pymes es una meta de planificación.",
+    "criteria": [
+      "Necesidad documentada de capacidades de IA",
+      "Capacidad de aportar caso de uso y entorno operativo",
+      "Compromiso de participación activa (no meramente testimonial)",
+      "Alineación con sectores prioritarios del proyecto",
+      "Disposición a compartir resultados de forma anonimizada"
+    ],
+    "baseline": "Se establecerá una línea base de indicadores antes de la implantación para medir impacto real.",
+    "demandProof": "La prueba de demanda se construirá con datos verificables, no con declaraciones de intención."
+  },
+  "commercialOffer": {
+    "title": "Oferta comercial prevista",
+    "description": "Líneas de servicio hipotéticas que podrían ofrecerse si el proyecto se aprueba y se alcanzan los hitos técnicos. Ninguna tarifa está vigente ni se ha facturado.",
+    "warning": "Los precios son orientativos y están sujetos a validación de mercado. No constituyen oferta vinculante.",
+    "services": [
+      {
+        "name": "Licencia de uso ARCHEION",
+        "category": "Licencia software",
+        "description": "Derecho de uso de la plataforma de trazabilidad documental en entorno empresarial",
+        "pricingModel": "Suscripción anual por usuario o por volumen de documentos",
+        "priceRange": "Por definir según validación de mercado",
+        "status": "Hipótesis comercial — sin tarifa vigente",
+        "maturity": "concepto"
+      },
+      {
+        "name": "Consultoría SAE",
+        "category": "Servicio profesional",
+        "description": "Acompañamiento en implementación de supervisión humana y gobernanza de IA",
+        "pricingModel": "Tarifa por días de consultoría o paquete de horas",
+        "priceRange": "Por definir según alcance y complejidad",
+        "status": "Hipótesis comercial — sin tarifa vigente",
+        "maturity": "concepto"
+      },
+      {
+        "name": "Formación CESAC AI",
+        "category": "Formación",
+        "description": "Programas de capacitación en IA empresarial para equipos técnicos y directivos",
+        "pricingModel": "Tarifa por participante o por grupo empresarial",
+        "priceRange": "Por definir según duración y contenido",
+        "status": "Hipótesis comercial — sin tarifa vigente",
+        "maturity": "concepto"
+      },
+      {
+        "name": "Implantación JOULE",
+        "category": "Proyecto",
+        "description": "Optimización de infraestructura de IA existente para reducir costes operativos",
+        "pricingModel": "Precio fijo por proyecto o éxito compartido",
+        "priceRange": "Por definir según diagnóstico inicial",
+        "status": "Hipótesis comercial — sin tarifa vigente",
+        "maturity": "concepto"
+      }
+    ]
+  },
+  "revenueCategories": {
+    "title": "Categorías de ingresos (hipótesis)",
+    "description": "Clasificación de posibles fuentes de ingresos. Ninguna se ha materializado.",
+    "categories": [
+      {
+        "name": "Tarifas de estudio",
+        "description": "Ingresos por análisis preliminares, diagnósticos o pruebas de concepto",
+        "status": "Hipótesis — sin ingresos generados"
+      },
+      {
+        "name": "Oferta actual",
+        "description": "Servicios que podrían ofrecerse si se alcanzan hitos técnicos",
+        "status": "Hipótesis — sin oferta vigente"
+      },
+      {
+        "name": "Contrato firmado",
+        "description": "Acuerdos vinculantes con clientes",
+        "status": "No hay contratos firmados"
+      },
+      {
+        "name": "Facturado",
+        "description": "Importes emitidos en facturas",
+        "status": "No hay facturación"
+      },
+      {
+        "name": "Cobrado",
+        "description": "Importes efectivamente recibidos",
+        "status": "No hay cobros"
+      }
+    ]
+  },
+  "unitEconomics": {
+    "title": "Modelo unitario económico (previsto)",
+    "description": "Estructura de costes e ingresos por unidad de servicio. Las cifras son variables y están por validar con datos reales.",
+    "components": [
+      {
+        "name": "Costes de soporte",
+        "description": "Atención al cliente, mantenimiento correctivo, actualizaciones",
+        "status": "Por estimar"
+      },
+      {
+        "name": "Hosting e infraestructura",
+        "description": "Servidores, almacenamiento, ancho de banda, servicios cloud",
+        "status": "Por estimar"
+      },
+      {
+        "name": "Licencias de terceros",
+        "description": "Modelos de lenguaje, APIs, componentes comerciales utilizados",
+        "status": "Por estimar"
+      },
+      {
+        "name": "Personal técnico",
+        "description": "Equipo de desarrollo, operaciones y soporte",
+        "status": "Por estimar"
+      },
+      {
+        "name": "Margen objetivo",
+        "description": "Beneficio bruto previsto para sostenibilidad",
+        "status": "Por definir según validación de mercado"
+      }
+    ],
+    "warning": "Este modelo es una estructura de planificación. No refleja ingresos ni costes reales."
+  },
+  "marketLaunch": {
+    "title": "Objetivo de puesta en mercado",
+    "description": "Previsión temporal para inicio de comercialización, sujeta a cumplimiento de hitos técnicos y validación de demanda.",
+    "targetMonth": 24,
+    "targetDescription": "Mes 24 del proyecto como objetivo de planificación",
+    "prerequisites": [
+      "TRL 6 acreditado de la configuración empresarial",
+      "Pilotos empresariales completados con resultados medibles",
+      "Validación de demanda con al menos 3 casos de uso reales",
+      "Estructura de precios validada con clientes potenciales",
+      "Marco jurídico de licencias y protección de datos operativo"
+    ],
+    "status": "Objetivo de planificación — no hito completado"
+  },
+  "backgroundIP": {
+    "title": "Inventario de propiedad intelectual previa (Background IP)",
+    "description": "Registro de activos de propiedad intelectual existentes antes de la entrada de nuevos miembros del consorcio. La titularidad está por acreditar.",
+    "assets": [
+      {
+        "name": "ARCHEION",
+        "type": "Software",
+        "holder": "Por acreditar",
+        "protection": "Derecho de autor (registro pendiente)",
+        "thirdPartyComponents": "Dependencias open-source y comerciales por inventariar",
+        "reuseRestrictions": "Por definir según licencias de terceros"
+      },
+      {
+        "name": "SAE",
+        "type": "Software",
+        "holder": "Por acreditar",
+        "protection": "Derecho de autor (registro pendiente)",
+        "thirdPartyComponents": "Modelos de evaluación de terceros",
+        "reuseRestrictions": "Por definir"
+      },
+      {
+        "name": "JOULE",
+        "type": "Software",
+        "holder": "Por acreditar",
+        "protection": "Derecho de autor (registro pendiente)",
+        "thirdPartyComponents": "Herramientas de perfilado de terceros",
+        "reuseRestrictions": "Por definir"
+      },
+      {
+        "name": "CESAC AI",
+        "type": "Material formativo",
+        "holder": "Por acreditar",
+        "protection": "Derecho de autor",
+        "thirdPartyComponents": "Contenido de terceros por identificar",
+        "reuseRestrictions": "Por definir"
+      }
+    ],
+    "warning": "La titularidad no está acreditada. No se han registrado patentes ni marcas. Los derechos son materia de inventario y acuerdos reales."
+  },
+  "ipTypes": {
+    "title": "Tipos de propiedad intelectual",
+    "description": "Diferencias entre formas de protección. Ningún activo está registrado actualmente.",
+    "types": [
+      {
+        "name": "Patente",
+        "description": "Protege invenciones técnicas nuevas con aplicación industrial",
+        "duration": "20 años desde solicitud",
+        "currentStatus": "0 patentes registradas — objetivo de planificación"
+      },
+      {
+        "name": "Marca",
+        "description": "Protege signos distintivos de productos o servicios",
+        "duration": "10 años renovables",
+        "currentStatus": "0 marcas registradas — objetivo de planificación"
+      },
+      {
+        "name": "Diseño industrial",
+        "description": "Protege la apariencia estética u ornamental de un producto",
+        "duration": "5 años renovables hasta 25",
+        "currentStatus": "0 diseños registrados — objetivo de planificación"
+      },
+      {
+        "name": "Derecho de autor",
+        "description": "Protege obras literarias, artísticas y software desde su creación",
+        "duration": "Vida del autor + 70 años",
+        "currentStatus": "Derechos automáticos sobre código y documentación — registro voluntario"
+      },
+      {
+        "name": "Secreto empresarial",
+        "description": "Protege información confidencial con valor comercial (algoritmos, datos, procesos)",
+        "duration": "Indefinida mientras se mantenga el secreto",
+        "currentStatus": "Medidas de confidencialidad previstas — NDA por formalizar"
+      }
+    ]
+  },
+  "ipTargets": {
+    "title": "Indicadores objetivo de propiedad intelectual",
+    "description": "Metas de planificación, no derechos registrados. Sujetos a validación jurídica y estratégica.",
+    "targets": [
+      {
+        "type": "Patentes",
+        "target": 0,
+        "note": "No se ha presentado ninguna solicitud de patente"
+      },
+      {
+        "type": "Licencias otorgadas",
+        "target": 4,
+        "note": "Objetivo de planificación — sin licencias firmadas"
+      },
+      {
+        "type": "Diseños registrados",
+        "target": 0,
+        "note": "No se ha presentado ningún registro de diseño"
+      },
+      {
+        "type": "Marcas registradas",
+        "target": 2,
+        "note": "Objetivo de planificación — sin marcas registradas"
+      },
+      {
+        "type": "Activos protegidos",
+        "target": 4,
+        "note": "Objetivo de planificación — sin protección formal acreditada"
+      }
+    ],
+    "warning": "Estos indicadores son metas, no derechos adquiridos. Las marcas propuestas no suponen registro concedido sin búsquedas de anterioridad y expediente."
+  },
+  "hypotheticalCases": {
+    "title": "Biblioteca de casos hipotéticos",
+    "description": "Ejemplos simulados de aplicación de las soluciones. No son testimonios reales ni casos de clientes.",
+    "warning": "Todos los casos son hipotéticos y están claramente simulados. No representan implantaciones reales ni resultados verificados.",
+    "cases": [
+      {
+        "id": "hyp-001",
+        "title": "Cooperativa agroalimentaria (simulado)",
+        "sector": "Agroalimentación",
+        "scenario": "Uso hipotético de ARCHEION para trazabilidad de lotes y certificados de calidad",
+        "expectedOutcome": "Reducción simulada de tiempos de auditoría",
+        "disclaimer": "Caso hipotético — no representa implantación real"
+      },
+      {
+        "id": "hyp-002",
+        "title": "Fabricante de componentes (simulado)",
+        "sector": "Manufactura",
+        "scenario": "Uso hipotético de SAE para supervisión de decisiones de control de calidad",
+        "expectedOutcome": "Mejora simulada en trazabilidad de decisiones",
+        "disclaimer": "Caso hipotético — no representa implantación real"
+      },
+      {
+        "id": "hyp-003",
+        "title": "Despacho profesional (simulado)",
+        "sector": "Servicios legales",
+        "scenario": "Uso hipotético de CESAC AI para formación en herramientas de IA documental",
+        "expectedOutcome": "Capacitación simulada de equipos",
+        "disclaimer": "Caso hipotético — no representa implantación real"
+      }
+    ]
+  },
+  "adoptionMetrics": {
+    "title": "Indicadores de adopción y renovación (objetivos)",
+    "description": "Métricas que se medirán si el proyecto se ejecuta. Ningún valor se ha alcanzado.",
+    "metrics": [
+      {
+        "name": "Tasa de adopción",
+        "description": "Porcentaje de pymes objetivo que implementan la solución",
+        "target": "Por definir",
+        "current": "No medido"
+      },
+      {
+        "name": "Tasa de renovación",
+        "description": "Porcentaje de clientes que renuevan suscripciones anuales",
+        "target": "Por definir",
+        "current": "No medido"
+      },
+      {
+        "name": "Satisfacción del cliente",
+        "description": "Puntuación NPS o similar",
+        "target": "Por definir",
+        "current": "No medido"
+      },
+      {
+        "name": "Margen de contribución",
+        "description": "Ingresos menos costes directos por servicio",
+        "target": "Por definir",
+        "current": "No medido"
+      }
+    ],
+    "warning": "Estos indicadores son objetivos de planificación. No se muestran valores simulados como si fueran producción."
+  },
+  "licensingGuidelines": {
+    "title": "Directrices para licencias comerciales y NDA",
+    "description": "Borrador de principios para futuros acuerdos. No son contratos jurídicos vinculantes.",
+    "principles": [
+      "Claridad en derechos de uso, modificación y redistribución",
+      "Delimitación entre uso interno y comercial",
+      "Protección de datos personales según GDPR",
+      "Responsabilidades en caso de fallos o incumplimientos",
+      "Mecanismos de resolución de disputas",
+      "Confidencialidad de información sensible (NDA)"
+    ],
+    "warning": "Este documento es orientativo. Los contratos reales requerirán asesoramiento jurídico independiente.",
+    "status": "Borrador interno — no publicado como contrato"
+  }
 }
