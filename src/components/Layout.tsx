@@ -39,6 +39,7 @@ export default function Layout() {
     { to: '/tecnologia', label: 'Tecnología' },
     { to: '/seguridad', label: 'Seguridad' },
     { to: '/inversion', label: 'Inversión' },
+    { to: '/comercializacion', label: 'Comercialización' },
     { to: '/vision', label: 'Visión' },
     { to: '/transparencia', label: 'Transparencia' },
   ];

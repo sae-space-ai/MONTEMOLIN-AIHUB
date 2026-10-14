@@ -5,6 +5,7 @@ import StagePage from './pages/StagePage';
 import Technology from './pages/Technology';
 import Security from './pages/Security';
 import Investment from './pages/Investment';
+import Commercial from './pages/Commercial';
 import Vision from './pages/Vision';
 import Transparency from './pages/Transparency';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="tecnologia" element={<Technology />} />
           <Route path="seguridad" element={<Security />} />
           <Route path="inversion" element={<Investment />} />
+          <Route path="comercializacion" element={<Commercial />} />
           <Route path="vision" element={<Vision />} />
           <Route path="transparencia" element={<Transparency />} />
         </Route>

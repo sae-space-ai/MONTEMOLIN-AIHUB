@@ -606,5 +606,308 @@
     ],
     "baseline": "Se establecerá una línea base de indicadores antes de la implantación para medir impacto real.",
     "demandProof": "La prueba de demanda se construirá con datos verificables, no con declaraciones de intención."
+  },
+  "commercialOffer": {
+    "title": "Oferta comercial prevista",
+    "description": "Líneas de servicio hipotéticas que podrían ofrecerse si el proyecto se aprueba y se alcanzan los hitos técnicos. Ninguna tarifa está vigente ni se ha facturado.",
+    "warning": "Los precios son orientativos y están sujetos a validación de mercado. No constituyen oferta vinculante.",
+    "services": [
+      {
+        "name": "Licencia de uso ARCHEION",
+        "category": "Licencia software",
+        "description": "Derecho de uso de la plataforma de trazabilidad documental en entorno empresarial",
+        "pricingModel": "Suscripción anual por usuario o por volumen de documentos",
+        "priceRange": "Por definir según validación de mercado",
+        "status": "Hipótesis comercial — sin tarifa vigente",
+        "maturity": "concepto"
+      },
+      {
+        "name": "Consultoría SAE",
+        "category": "Servicio profesional",
+        "description": "Acompañamiento en implementación de supervisión humana y gobernanza de IA",
+        "pricingModel": "Tarifa por días de consultoría o paquete de horas",
+        "priceRange": "Por definir según alcance y complejidad",
+        "status": "Hipótesis comercial — sin tarifa vigente",
+        "maturity": "concepto"
+      },
+      {
+        "name": "Formación CESAC AI",
+        "category": "Formación",
+        "description": "Programas de capacitación en IA empresarial para equipos técnicos y directivos",
+        "pricingModel": "Tarifa por participante o por grupo empresarial",
+        "priceRange": "Por definir según duración y contenido",
+        "status": "Hipótesis comercial — sin tarifa vigente",
+        "maturity": "concepto"
+      },
+      {
+        "name": "Implantación JOULE",
+        "category": "Proyecto",
+        "description": "Optimización de infraestructura de IA existente para reducir costes operativos",
+        "pricingModel": "Precio fijo por proyecto o éxito compartido",
+        "priceRange": "Por definir según diagnóstico inicial",
+        "status": "Hipótesis comercial — sin tarifa vigente",
+        "maturity": "concepto"
+      }
+    ]
+  },
+  "revenueCategories": {
+    "title": "Categorías de ingresos (hipótesis)",
+    "description": "Clasificación de posibles fuentes de ingresos. Ninguna se ha materializado.",
+    "categories": [
+      {
+        "name": "Tarifas de estudio",
+        "description": "Ingresos por análisis preliminares, diagnósticos o pruebas de concepto",
+        "status": "Hipótesis — sin ingresos generados"
+      },
+      {
+        "name": "Oferta actual",
+        "description": "Servicios que podrían ofrecerse si se alcanzan hitos técnicos",
+        "status": "Hipótesis — sin oferta vigente"
+      },
+      {
+        "name": "Contrato firmado",
+        "description": "Acuerdos vinculantes con clientes",
+        "status": "No hay contratos firmados"
+      },
+      {
+        "name": "Facturado",
+        "description": "Importes emitidos en facturas",
+        "status": "No hay facturación"
+      },
+      {
+        "name": "Cobrado",
+        "description": "Importes efectivamente recibidos",
+        "status": "No hay cobros"
+      }
+    ]
+  },
+  "unitEconomics": {
+    "title": "Modelo unitario económico (previsto)",
+    "description": "Estructura de costes e ingresos por unidad de servicio. Las cifras son variables y están por validar con datos reales.",
+    "components": [
+      {
+        "name": "Costes de soporte",
+        "description": "Atención al cliente, mantenimiento correctivo, actualizaciones",
+        "status": "Por estimar"
+      },
+      {
+        "name": "Hosting e infraestructura",
+        "description": "Servidores, almacenamiento, ancho de banda, servicios cloud",
+        "status": "Por estimar"
+      },
+      {
+        "name": "Licencias de terceros",
+        "description": "Modelos de lenguaje, APIs, componentes comerciales utilizados",
+        "status": "Por estimar"
+      },
+      {
+        "name": "Personal técnico",
+        "description": "Equipo de desarrollo, operaciones y soporte",
+        "status": "Por estimar"
+      },
+      {
+        "name": "Margen objetivo",
+        "description": "Beneficio bruto previsto para sostenibilidad",
+        "status": "Por definir según validación de mercado"
+      }
+    ],
+    "warning": "Este modelo es una estructura de planificación. No refleja ingresos ni costes reales."
+  },
+  "marketLaunch": {
+    "title": "Objetivo de puesta en mercado",
+    "description": "Previsión temporal para inicio de comercialización, sujeta a cumplimiento de hitos técnicos y validación de demanda.",
+    "targetMonth": 24,
+    "targetDescription": "Mes 24 del proyecto como objetivo de planificación",
+    "prerequisites": [
+      "TRL 6 acreditado de la configuración empresarial",
+      "Pilotos empresariales completados con resultados medibles",
+      "Validación de demanda con al menos 3 casos de uso reales",
+      "Estructura de precios validada con clientes potenciales",
+      "Marco jurídico de licencias y protección de datos operativo"
+    ],
+    "status": "Objetivo de planificación — no hito completado"
+  },
+  "backgroundIP": {
+    "title": "Inventario de propiedad intelectual previa (Background IP)",
+    "description": "Registro de activos de propiedad intelectual existentes antes de la entrada de nuevos miembros del consorcio. La titularidad está por acreditar.",
+    "assets": [
+      {
+        "name": "ARCHEION",
+        "type": "Software",
+        "holder": "Por acreditar",
+        "protection": "Derecho de autor (registro pendiente)",
+        "thirdPartyComponents": "Dependencias open-source y comerciales por inventariar",
+        "reuseRestrictions": "Por definir según licencias de terceros"
+      },
+      {
+        "name": "SAE",
+        "type": "Software",
+        "holder": "Por acreditar",
+        "protection": "Derecho de autor (registro pendiente)",
+        "thirdPartyComponents": "Modelos de evaluación de terceros",
+        "reuseRestrictions": "Por definir"
+      },
+      {
+        "name": "JOULE",
+        "type": "Software",
+        "holder": "Por acreditar",
+        "protection": "Derecho de autor (registro pendiente)",
+        "thirdPartyComponents": "Herramientas de perfilado de terceros",
+        "reuseRestrictions": "Por definir"
+      },
+      {
+        "name": "CESAC AI",
+        "type": "Material formativo",
+        "holder": "Por acreditar",
+        "protection": "Derecho de autor",
+        "thirdPartyComponents": "Contenido de terceros por identificar",
+        "reuseRestrictions": "Por definir"
+      }
+    ],
+    "warning": "La titularidad no está acreditada. No se han registrado patentes ni marcas. Los derechos son materia de inventario y acuerdos reales."
+  },
+  "ipTypes": {
+    "title": "Tipos de propiedad intelectual",
+    "description": "Diferencias entre formas de protección. Ningún activo está registrado actualmente.",
+    "types": [
+      {
+        "name": "Patente",
+        "description": "Protege invenciones técnicas nuevas con aplicación industrial",
+        "duration": "20 años desde solicitud",
+        "currentStatus": "0 patentes registradas — objetivo de planificación"
+      },
+      {
+        "name": "Marca",
+        "description": "Protege signos distintivos de productos o servicios",
+        "duration": "10 años renovables",
+        "currentStatus": "0 marcas registradas — objetivo de planificación"
+      },
+      {
+        "name": "Diseño industrial",
+        "description": "Protege la apariencia estética u ornamental de un producto",
+        "duration": "5 años renovables hasta 25",
+        "currentStatus": "0 diseños registrados — objetivo de planificación"
+      },
+      {
+        "name": "Derecho de autor",
+        "description": "Protege obras literarias, artísticas y software desde su creación",
+        "duration": "Vida del autor + 70 años",
+        "currentStatus": "Derechos automáticos sobre código y documentación — registro voluntario"
+      },
+      {
+        "name": "Secreto empresarial",
+        "description": "Protege información confidencial con valor comercial (algoritmos, datos, procesos)",
+        "duration": "Indefinida mientras se mantenga el secreto",
+        "currentStatus": "Medidas de confidencialidad previstas — NDA por formalizar"
+      }
+    ]
+  },
+  "ipTargets": {
+    "title": "Indicadores objetivo de propiedad intelectual",
+    "description": "Metas de planificación, no derechos registrados. Sujetos a validación jurídica y estratégica.",
+    "targets": [
+      {
+        "type": "Patentes",
+        "target": 0,
+        "note": "No se ha presentado ninguna solicitud de patente"
+      },
+      {
+        "type": "Licencias otorgadas",
+        "target": 4,
+        "note": "Objetivo de planificación — sin licencias firmadas"
+      },
+      {
+        "type": "Diseños registrados",
+        "target": 0,
+        "note": "No se ha presentado ningún registro de diseño"
+      },
+      {
+        "type": "Marcas registradas",
+        "target": 2,
+        "note": "Objetivo de planificación — sin marcas registradas"
+      },
+      {
+        "type": "Activos protegidos",
+        "target": 4,
+        "note": "Objetivo de planificación — sin protección formal acreditada"
+      }
+    ],
+    "warning": "Estos indicadores son metas, no derechos adquiridos. Las marcas propuestas no suponen registro concedido sin búsquedas de anterioridad y expediente."
+  },
+  "hypotheticalCases": {
+    "title": "Biblioteca de casos hipotéticos",
+    "description": "Ejemplos simulados de aplicación de las soluciones. No son testimonios reales ni casos de clientes.",
+    "warning": "Todos los casos son hipotéticos y están claramente simulados. No representan implantaciones reales ni resultados verificados.",
+    "cases": [
+      {
+        "id": "hyp-001",
+        "title": "Cooperativa agroalimentaria (simulado)",
+        "sector": "Agroalimentación",
+        "scenario": "Uso hipotético de ARCHEION para trazabilidad de lotes y certificados de calidad",
+        "expectedOutcome": "Reducción simulada de tiempos de auditoría",
+        "disclaimer": "Caso hipotético — no representa implantación real"
+      },
+      {
+        "id": "hyp-002",
+        "title": "Fabricante de componentes (simulado)",
+        "sector": "Manufactura",
+        "scenario": "Uso hipotético de SAE para supervisión de decisiones de control de calidad",
+        "expectedOutcome": "Mejora simulada en trazabilidad de decisiones",
+        "disclaimer": "Caso hipotético — no representa implantación real"
+      },
+      {
+        "id": "hyp-003",
+        "title": "Despacho profesional (simulado)",
+        "sector": "Servicios legales",
+        "scenario": "Uso hipotético de CESAC AI para formación en herramientas de IA documental",
+        "expectedOutcome": "Capacitación simulada de equipos",
+        "disclaimer": "Caso hipotético — no representa implantación real"
+      }
+    ]
+  },
+  "adoptionMetrics": {
+    "title": "Indicadores de adopción y renovación (objetivos)",
+    "description": "Métricas que se medirán si el proyecto se ejecuta. Ningún valor se ha alcanzado.",
+    "metrics": [
+      {
+        "name": "Tasa de adopción",
+        "description": "Porcentaje de pymes objetivo que implementan la solución",
+        "target": "Por definir",
+        "current": "No medido"
+      },
+      {
+        "name": "Tasa de renovación",
+        "description": "Porcentaje de clientes que renuevan suscripciones anuales",
+        "target": "Por definir",
+        "current": "No medido"
+      },
+      {
+        "name": "Satisfacción del cliente",
+        "description": "Puntuación NPS o similar",
+        "target": "Por definir",
+        "current": "No medido"
+      },
+      {
+        "name": "Margen de contribución",
+        "description": "Ingresos menos costes directos por servicio",
+        "target": "Por definir",
+        "current": "No medido"
+      }
+    ],
+    "warning": "Estos indicadores son objetivos de planificación. No se muestran valores simulados como si fueran producción."
+  },
+  "licensingGuidelines": {
+    "title": "Directrices para licencias comerciales y NDA",
+    "description": "Borrador de principios para futuros acuerdos. No son contratos jurídicos vinculantes.",
+    "principles": [
+      "Claridad en derechos de uso, modificación y redistribución",
+      "Delimitación entre uso interno y comercial",
+      "Protección de datos personales según GDPR",
+      "Responsabilidades en caso de fallos o incumplimientos",
+      "Mecanismos de resolución de disputas",
+      "Confidencialidad de información sensible (NDA)"
+    ],
+    "warning": "Este documento es orientativo. Los contratos reales requerirán asesoramiento jurídico independiente.",
+    "status": "Borrador interno — no publicado como contrato"
   }
 }
