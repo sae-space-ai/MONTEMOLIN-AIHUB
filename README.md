@@ -4,13 +4,22 @@
 
 > ⚠️ **Proyecto en preparación.** Este sitio tiene carácter demostrativo. No se ha concedido financiación de la Unión Europea. Convocatoria de referencia: I3-2026-INV2a.
 
-## Estado actual — Fase 0
+## Estado actual — Fase 1
 
-La Fase 0 establece la base pública editorial, accesible y jurídicamente prudente del proyecto. Incluye:
+La Fase 1 mejora la sección tecnológica con arquitectura, evidencias y seguridad:
 
+- **Arquitectura de referencia modular** de cinco capas (datos, RAG, razonamiento, supervisión, entrega)
+- **Etiquetas de madurez** inequívocas: concepto, prototipo, demostrado, implementado, comercial
+- **Modelo de evidencias TRL** con campos vacíos cuando no hay documentación publicable
+- **Lista de aceptación técnica** con criterios medibles pendientes de verificar
+- **Página de seguridad** con supervisión humana, privacidad y respuesta a incidentes
+- **Diferenciación** entre producto comercial maduro de terceros y personalización local
+- **Procedencia de modelos** y APIs de terceros sin exponer credenciales
+- **DGX B200** presentado exclusivamente como estudio de viabilidad
+- **Sin imágenes de servidores** como equipamiento existente
 - Landing page con misión, alcance, región y estado
 - Ruta de cinco fases (0–4) con navegación bidireccional
-- Páginas de tecnología, inversión, visión y transparencia
+- Páginas de tecnología, seguridad, inversión, visión y transparencia
 - Datos canónicos centralizados en `data/project.json`
 - Diseño responsive (320px a 1920px) y accesible (WCAG AA)
 - Aviso visible de proyecto en preparación
@@ -32,7 +41,8 @@ La Fase 0 establece la base pública editorial, accesible y jurídicamente prude
 │   └── pages/
 │       ├── Home.tsx           # Landing page
 │       ├── StagePage.tsx      # Páginas de fases 0–4
-│       ├── Technology.tsx     # Ecosistema tecnológico
+│       ├── Technology.tsx     # Ecosistema tecnológico y arquitectura
+│       ├── Security.tsx       # Seguridad y gobernanza de IA
 │       ├── Investment.tsx     # Presupuesto e inversión
 │       ├── Vision.tsx         # Visión industrial AION ZERO
 │       └── Transparency.tsx   # Transparencia y fuentes
@@ -120,4 +130,4 @@ Este repositorio es una propuesta demostrativa. La propiedad intelectual del sof
 
 ## Fase siguiente
 
-La Fase 1 abordará ingeniería y validación tecnológica, partiendo de esta base reparada y funcional.
+La Fase 2 abordará inversión interregional, pilotos empresariales y cadena de valor, partiendo de esta base tecnológica y de seguridad.
