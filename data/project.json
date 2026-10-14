@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "call": "I3-2026-INV2a",
+    "acronym": "MONTEMOLIN-AIHUB",
+    "fullName": "Montemolín AI Hub",
+    "durationMonths": 30,
+    "region": "Extremadura (ES43)",
+    "budgetScenarioEUR": 14000000,
+    "euContributionIllustrativeEUR": 9800000,
+    "cofinancingNotCommittedEUR": 4200000,
+    "status": "En preparación; no financiado ni respaldado oficialmente por la UE",
+    "statusShort": "Proyecto en preparación",
+    "location": "Montemolín, Badajoz, Extremadura, España",
+    "nuts2": "ES43"
+  },
+  "stages": [
+    {
+      "id": 0,
+      "slug": "0",
+      "title": "Fundamentos y cohesión",
+      "subtitle": "La misión, el territorio y las reglas",
+      "months": "Preparación y meses 1–3 (propuesto)",
+      "headline": "Primero, un propósito que se puede demostrar.",
+      "description": "Establecer la identidad del Hub, la gobernanza, el perímetro jurídico y la colaboración interregional. La sede territorial prevista es Montemolín, Extremadura, región menos desarrollada en el marco de cohesión de la UE.",
+      "goals": [
+        "Definir el modelo de gobernanza y los derechos sobre la tecnología previa.",
+        "Seleccionar socios elegibles de al menos tres regiones y dos países.",
+        "Justificar la coherencia S3/RIS3 de cada región participante.",
+        "Acordar un presupuesto verificable, con inversiones y aportaciones identificadas."
+      ],
+      "outputs": [
+        "Matriz de elegibilidad y funciones del consorcio.",
+        "Declaraciones S3 contrastadas y firmadas.",
+        "Inventario de propiedad intelectual previa.",
+        "Presupuesto consolidado y plan de evidencia."
+      ],
+      "gates": [
+        "Consorcio jurídicamente elegible verificado.",
+        "No hay acuerdos institucionales inventados.",
+        "S3 acreditada para todas las regiones."
+      ],
+      "workpacks": "WP1 · WP6"
+    },
+    {
+      "id": 1,
+      "slug": "1",
+      "title": "Tecnología preparada",
+      "subtitle": "TRL, seguridad y capacidad real",
+      "months": "Meses 1–8 (propuesto)",
+      "headline": "La tecnología debe funcionar antes de prometer escalarla.",
+      "description": "Seleccionar una solución empresarial con TRL inicial mínimo 6 comprobado. Integrar de manera controlada capacidades de automatización, inteligencia documental y supervisión; no confundir prototipos propios con productos maduros.",
+      "goals": [
+        "Recopilar evidencias independientes del TRL inicial de la configuración financiada.",
+        "Definir controles de privacidad, seguridad, intervención humana y registro de decisiones.",
+        "Preparar arquitectura tecnológica modular, interoperable y eficiente.",
+        "Fijar pruebas de aceptación y una línea base comparable para los pilotos empresariales."
+      ],
+      "outputs": [
+        "Dossier de evidencias TRL 6 o superior.",
+        "Arquitectura de referencia y pruebas de seguridad.",
+        "Protocolo de calidad y medición de resultados.",
+        "Plan de implantación y costes de infraestructura elegibles."
+      ],
+      "gates": [
+        "TRL inicial documentado; si falta, no declarar cumplimiento.",
+        "Pruebas reproducibles y criterios de aceptación.",
+        "Derechos y licencias de componentes identificados."
+      ],
+      "workpacks": "WP2 · WP6"
+    },
+    {
+      "id": 2,
+      "slug": "2",
+      "title": "Inversión interregional",
+      "subtitle": "Empresas que despliegan y producen",
+      "months": "Meses 6–20 (propuesto)",
+      "headline": "La inversión debe quedarse en las empresas y en el territorio.",
+      "description": "Desarrollar casos de inversión dirigidos por empresas de varias regiones europeas, priorizando el impacto productivo en Extremadura y otras regiones menos desarrolladas, con actividades y costes territorialmente trazables.",
+      "goals": [
+        "Concretar tres casos de inversión como objetivo de planificación, no como compromisos actuales.",
+        "Construir una cartera inicial objetivo de 12 pymes con necesidades medibles.",
+        "Verificar el umbral I3 de inversión empresarial y gasto en regiones menos desarrolladas.",
+        "Implantar soluciones en entornos operativos reales y medir productividad y adopción."
+      ],
+      "outputs": [
+        "Convenios de inversión firmados por las empresas participantes.",
+        "Carpetas de ejecución y costes por beneficiario y región.",
+        "Resultados de pilotos y validación empresarial.",
+        "Datos comparativos antes/después de la implantación."
+      ],
+      "gates": [
+        "70 % de costes directos elegibles destinados a inversiones empresariales.",
+        "50 % de costes elegibles en regiones menos desarrolladas.",
+        "Los importes de terceros no son financiación comprometida sin prueba."
+      ],
+      "workpacks": "WP3 · WP4 · WP6"
+    },
+    {
+      "id": 3,
+      "slug": "3",
+      "title": "Mercado y monetización",
+      "subtitle": "De la adopción a los ingresos",
+      "months": "Meses 15–27 (propuesto)",
+      "headline": "El impacto se consolida cuando hay clientes reales.",
+      "description": "Construir servicios y productos comercializables en IA documental, automatización empresarial, auditoría y capacitación; separar las hipótesis de ingresos de los contratos e importes cobrados.",
+      "goals": [
+        "Elaborar ofertas de despliegue empresarial y licencias con precios y condiciones transparentes.",
+        "Validar una hoja de ruta de comercialización inicial a 24 meses, como objetivo.",
+        "Registrar los derechos de acceso, explotación y titularidad de tecnología propia y ajena.",
+        "Medir renovaciones, satisfacción y margen de contribución después de prestar el servicio."
+      ],
+      "outputs": [
+        "Catálogo comercial y modelo de precios con hipótesis trazables.",
+        "Registro de oportunidades, contratos y facturación, cuando existan.",
+        "Plan de propiedad intelectual y licencias.",
+        "Análisis de viabilidad para operación después del proyecto."
+      ],
+      "gates": [
+        "No publicar como ventas lo que sean previsiones.",
+        "No atribuir propiedad de software sin acreditar derechos.",
+        "No usar logos de candidatos como socios confirmados."
+      ],
+      "workpacks": "WP4 · WP5 · WP6"
+    },
+    {
+      "id": 4,
+      "slug": "4",
+      "title": "Continuidad y escalado",
+      "subtitle": "Un Hub sostenible más allá de la ayuda",
+      "months": "Meses 24–30 y continuidad posterior (propuesto)",
+      "headline": "Construir algo que siga funcionando cuando termine la subvención.",
+      "description": "Comprobar resultados, contratos y capacidad de financiar la operación. La expansión computacional hacia AION ZERO y una eventual gigafactoría es una estrategia industrial separada, sujeta a ingeniería, demanda y financiación específicas.",
+      "goals": [
+        "Definir operador, propiedad, mantenimiento y costes recurrentes del Hub.",
+        "Documentar impactos reales en empleo, pymes y cadenas de valor europeas.",
+        "Diseñar un plan de inversión posterior basado en demanda acreditada.",
+        "Mantener una hoja de ruta de gigafactoría claramente separada de la acción I3."
+      ],
+      "outputs": [
+        "Plan de sostenibilidad y explotación postsubvención.",
+        "Informe de impacto y recomendaciones públicas.",
+        "Mapa de financiación posterior, sin compromisos presumidos.",
+        "Hoja de ruta industrial AION ZERO independiente."
+      ],
+      "gates": [
+        "Ingresos y financiación del siguiente ciclo fundamentados.",
+        "No confundir infraestructura futura con resultados ya construidos.",
+        "Aprobación y publicación de resultados solo con evidencia."
+      ],
+      "workpacks": "WP5 · WP6"
+    }
+  ],
+  "products": [
+    {
+      "name": "ARCHEION",
+      "tag": "Evidencia y trazabilidad",
+      "text": "Línea de trabajo para procedencia de información, verificación documental y evidencias auditables.",
+      "status": "Desarrollo propio; TRL 6 no acreditado"
+    },
+    {
+      "name": "SAE",
+      "tag": "Gobernanza de IA",
+      "text": "Evaluación, seguimiento y supervisión humana de sistemas de IA y sus resultados.",
+      "status": "Integración y madurez pendientes de verificación"
+    },
+    {
+      "name": "JOULE",
+      "tag": "Eficiencia computacional",
+      "text": "Optimización de costes, latencia y recursos de aplicaciones de inteligencia artificial.",
+      "status": "Prototipos y ensayos; mejoras reales por confirmar"
+    },
+    {
+      "name": "CESAC AI",
+      "tag": "Adopción y capacidades",
+      "text": "Formación, transferencia tecnológica y servicios para empresas y profesionales.",
+      "status": "Oferta comercial y operaciones en definición"
+    }
+  ],
+  "metrics": [
+    {
+      "value": "30",
+      "unit": "meses",
+      "name": "Horizonte de ejecución",
+      "note": "Planificación"
+    },
+    {
+      "value": "12",
+      "unit": "pymes",
+      "name": "Participación objetivo",
+      "note": "No confirmadas"
+    },
+    {
+      "value": "3",
+      "unit": "inversiones",
+      "name": "Casos propuestos",
+      "note": "Pendientes de acuerdos"
+    },
+    {
+      "value": "240",
+      "unit": "personas",
+      "name": "Alcance directo previsto",
+      "note": "Estimación"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Convocatoria I3-2026-INV2a — Portal Funding & Tenders",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/i3-2026-inv2a"
+    },
+    {
+      "name": "RIS3 Extremadura 2027 — Prioridades",
+      "url": "https://www.ris3extremadura.es/objetivos-y-lineas-estrategicas/"
+    }
+  ],
+  "nonClaims": [
+    "No es una web institucional de la Comisión Europea ni una comunicación de financiación concedida.",
+    "No hay constancia de acuerdos firmados con ACS, Telefónica, Banco Santander ni la Junta de Extremadura.",
+    "Las 12 pymes, 25 empleos equivalentes a jornada completa, tres inversiones y 240 personas son objetivos de planificación, no resultados actuales.",
+    "Los desarrollos ARCHEION, SAE y JOULE no se presentan como TRL 6 verificado.",
+    "La futura gigafactoría es una visión industrial independiente del alcance financiable I3."
+  ]
+}

@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green-primary: #006B3F;
+  --color-green-secondary: #2E8B57;
+  --color-green-light: #E8F5E9;
+  --color-black-deep: #1A1A1A;
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #E5E5E5;
+  --color-gray-300: #D4D4D4;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-warning-bg: #FEF3C7;
+  --color-warning-border: #F59E0B;
+  --color-warning-text: #92400E;
+}
+
+/* Focus visible */
+*:focus-visible {
+  outline: 3px solid var(--color-green-primary);
+  outline-offset: 2px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-green-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Smooth scroll with reduced motion respect */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Warning banner */
+.warning-banner {
+  background-color: var(--color-warning-bg);
+  border: 2px solid var(--color-warning-border);
+  color: var(--color-warning-text);
+}
+
+/* Stage cards */
+.stage-card {
+  border-left: 4px solid var(--color-green-primary);
+  transition: box-shadow 0.2s ease;
+}
+
+.stage-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 107, 63, 0.15);
+}
+
+/* Metric card */
+.metric-card {
+  background: linear-gradient(135deg, var(--color-green-light) 0%, white 100%);
+  border: 1px solid var(--color-gray-200);
+}
+
+/* Navigation active */
+.nav-link-active {
+  color: var(--color-green-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-green-primary);
+}
