@@ -366,6 +366,245 @@
     "Los desarrollos ARCHEION, SAE y JOULE no se presentan como TRL 6 verificado.",
     "La futura gigafactoría es una visión industrial independiente del alcance financiable I3.",
     "No existen cifras de ahorro, reducción de costes o mejora de rendimiento verificadas sin pruebas externas.",
-    "No se ha adquirido ni instalado equipamiento DGX B200 u otro hardware de alto rendimiento."
-  ]
+    "No se ha adquirido ni instalado equipamiento DGX B200 u otro hardware de alto rendimiento.",
+    "Ninguna carta de intención o contrato se presenta como firmado si no lo está.",
+    "Las subvenciones regionales son contexto informativo, no transferencia atribuida al Hub."
+  ],
+  "regions": {
+    "title": "Regiones elegibles y composición del consorcio",
+    "description": "La convocatoria I3 requiere un consorcio con entidades de al menos tres regiones NUTS2 diferentes y dos países. La composición exacta está pendiente de confirmación.",
+    "leadRegion": {
+      "name": "Extremadura",
+      "nuts2": "ES43",
+      "country": "España",
+      "status": "Región sede prevista",
+      "classification": "Región menos desarrollada",
+      "role": "Coordinación territorial, pilotos locales, trazabilidad de gasto regional"
+    },
+    "partnerRegions": {
+      "description": "Regiones candidatas a explorar como socias. No hay acuerdos firmados.",
+      "minimumRequired": {
+        "regions": 3,
+        "countries": 2
+      },
+      "candidates": [
+        {
+          "note": "Por confirmar — se buscan regiones NUTS2 de al menos un país adicional a España",
+          "status": "pendiente",
+          "ris3Alignment": "por verificar"
+        }
+      ],
+      "criteria": [
+        "Elegibilidad según reglas I3 (entidad legal establecida en la región)",
+        "Coherencia con la estrategia RIS3/S3 de la región",
+        "Capacidad de contribuir con inversión empresarial o tecnológica",
+        "Compromiso documentado (no meramente verbal)"
+      ]
+    },
+    "importantNote": "La composición mínima de socios requiere varias regiones y países, no simplemente varios PIC (Participant Identification Code). Cada socio debe tener presencia real y capacidad operativa en su territorio."
+  },
+  "investmentCases": {
+    "title": "Tres casos de inversión modelo",
+    "description": "Modelos hipotéticos de casos de inversión que podrían desarrollarse si el proyecto se aprueba y se encuentran empresas participantes. Ninguno representa un compromiso actual.",
+    "cases": [
+      {
+        "id": "case-1",
+        "name": "IA documental para pymes agroalimentarias",
+        "sector": "Agroalimentación",
+        "description": "Implantación de sistemas de clasificación, trazabilidad y análisis documental en cooperativas y pymes del sector.",
+        "workpack": "WP3",
+        "expectedValue": [
+          "Reducción de tiempos de procesamiento documental",
+          "Trazabilidad de lotes y certificados",
+          "Automatización de controles de calidad"
+        ],
+        "regionalImpact": "Extremadura y regiones con sector agroalimentario significativo",
+        "status": "Caso modelo — sin empresa asignada",
+        "investmentRange": "Por definir según alcance real"
+      },
+      {
+        "id": "case-2",
+        "name": "Automatización supervisada en manufactura",
+        "sector": "Manufactura industrial",
+        "description": "Sistemas de IA con supervisión humana para control de calidad, mantenimiento predictivo y optimización de procesos.",
+        "workpack": "WP3 · WP4",
+        "expectedValue": [
+          "Detección temprana de anomalías",
+          "Reducción de paradas no planificadas",
+          "Registro auditables de decisiones"
+        ],
+        "regionalImpact": "Regiones con tejido industrial manufacturero",
+        "status": "Caso modelo — sin empresa asignada",
+        "investmentRange": "Por definir según alcance real"
+      },
+      {
+        "id": "case-3",
+        "name": "Implantaciones sectoriales en servicios",
+        "sector": "Servicios profesionales",
+        "description": "Adaptación de soluciones de IA a sectores de servicios: legal, financiero, sanitario o administrativo.",
+        "workpack": "WP3 · WP4",
+        "expectedValue": [
+          "Asistencia documental con supervisión",
+          "Clasificación y extracción de información",
+          "Cumplimiento normativo con trazabilidad"
+        ],
+        "regionalImpact": "Diversas regiones según sector",
+        "status": "Caso modelo — sin empresa asignada",
+        "investmentRange": "Por definir según alcance real"
+      }
+    ]
+  },
+  "costCategories": {
+    "title": "Categorías de costes del proyecto",
+    "description": "Diferenciación entre tipos de costes según reglas de elegibilidad I3. Las cifras concretas por categoría están pendientes de consolidación.",
+    "categories": [
+      {
+        "name": "Costes directos elegibles",
+        "description": "Gastos directamente imputables al proyecto: personal, subcontratación, equipamiento, viajes",
+        "i3Rule": "Base para cálculo del 70 % de inversión empresarial",
+        "status": "Por consolidar"
+      },
+      {
+        "name": "Costes indirectos",
+        "description": "Gastos generales aplicables según porcentaje establecido por la convocatoria",
+        "i3Rule": "Reglas específicas de la convocatoria I3",
+        "status": "Por consolidar"
+      },
+      {
+        "name": "Equipamiento y depreciación",
+        "description": "Adquisición o uso de equipamiento. La depreciación se calcula según vida útil y uso real en el proyecto",
+        "i3Rule": "Solo la parte proporcional al proyecto es elegible",
+        "status": "Por consolidar"
+      },
+      {
+        "name": "Cofinanciación",
+        "description": "Aportaciones de socios o terceros para cubrir la parte no financiada por la UE",
+        "i3Rule": "Debe estar comprometida documentalmente",
+        "status": "Pendiente de identificar (4,2 M€)"
+      },
+      {
+        "name": "Financiación movilizada",
+        "description": "Inversión adicional de las empresas participantes más allá del presupuesto del proyecto",
+        "i3Rule": "No es subvención, es inversión privada",
+        "status": "Por cuantificar"
+      }
+    ],
+    "importantNote": "Calcular el 70 % sobre un monto no elegible no constituye ayuda autorizada. Las reglas I3 deben aplicarse sobre costes correctamente clasificados."
+  },
+  "partnerRoles": {
+    "title": "Roles posibles de los socios",
+    "description": "Descripción de responsabilidades que podrían asumir los socios del consorcio. No se atribuyen a candidatos específicos sin acuerdo documentado.",
+    "roles": [
+      {
+        "role": "Socio tecnológico",
+        "description": "Aporta capacidades de desarrollo, integración o validación tecnológica",
+        "responsibilities": [
+          "Desarrollo o adaptación de componentes de IA",
+          "Pruebas de integración y aceptación",
+          "Documentación técnica y de seguridad"
+        ],
+        "assignedTo": "Por confirmar"
+      },
+      {
+        "role": "Empresa industrial",
+        "description": "Participa como beneficiaria de implantación, aportando caso de uso y entorno operativo",
+        "responsibilities": [
+          "Definición de necesidades y criterios de aceptación",
+          "Cesión de entorno operativo para pilotos",
+          "Validación de resultados y adopción"
+        ],
+        "assignedTo": "Por confirmar"
+      },
+      {
+        "role": "Entidad regional",
+        "description": "Organismo público o semi-público que aporta contexto territorial, conexión con pymes y alineación RIS3",
+        "responsibilities": [
+          "Alineación con estrategia RIS3/S3 regional",
+          "Conexión con tejido empresarial local",
+          "Apoyo a la difusión y transferencia"
+        ],
+        "assignedTo": "Por confirmar"
+      }
+    ]
+  },
+  "i3rules": {
+    "title": "Reglas de inversión I3 aplicables",
+    "description": "Umbrales mínimos que deben verificarse con el texto vigente de la convocatoria. Los porcentajes son reglas a comprobar, no certificaciones del proyecto.",
+    "rules": [
+      {
+        "rule": "70 % de costes directos elegibles destinados a inversiones empresariales",
+        "description": "La mayor parte del presupuesto debe beneficiar directamente a empresas que invierten en implantación",
+        "verification": "Pendiente de verificar con texto de convocatoria y clasificación de costes",
+        "warning": "Calcular este porcentaje sobre montos no elegibles no constituye ayuda autorizada"
+      },
+      {
+        "rule": "50 % de costes elegibles en regiones menos desarrolladas",
+        "description": "Al menos la mitad del gasto elegible debe realizarse en regiones NUTS2 clasificadas como menos desarrolladas",
+        "verification": "Extremadura (ES43) es región menos desarrollada; otras regiones del consorcio por clasificar",
+        "warning": "La clasificación debe verificarse con datos oficiales de Eurostat"
+      }
+    ]
+  },
+  "doubleFunding": {
+    "title": "Principio de no doble financiación",
+    "description": "Los mismos costes no pueden ser financiados simultáneamente por fondos de la UE y fondos autonómicos/nacionales para el mismo concepto.",
+    "principles": [
+      "Cada coste se imputa a una única fuente de financiación",
+      "Se lleva registro de ayudas recibidas por beneficiario y concepto",
+      "Las subvenciones regionales son contexto informativo, no transferencia atribuida al Hub",
+      "En caso de solapamiento, se aplica la norma más restrictiva"
+    ],
+    "regionalContext": "Las ayudas autonómicas existentes en Extremadura u otras regiones son contexto informativo. No se presentan como transferencia atribuida al proyecto I3."
+  },
+  "dgxStudy": {
+    "title": "Estudio DGX B200 — Referencia técnica y financiera",
+    "description": "La posible incorporación de equipamiento NVIDIA DGX B200 (o equivalente) se analiza como referencia técnica y financiera, separada del coste subvencionable.",
+    "nature": "Estudio de alternativa, no adquisición realizada",
+    "separation": "Este estudio es independiente del presupuesto subvencionable I3. Cualquier inversión en equipamiento se clasificará según reglas de elegibilidad.",
+    "considerations": [
+      "Coste de adquisición vs. alquiler cloud",
+      "Vida útil y depreciación aplicable",
+      "Consumo energético y requisitos de infraestructura",
+      "Adecuación a casos de uso previstos",
+      "Alternativas open-source y multi-proveedor"
+    ],
+    "status": "Estudio en fase preliminar"
+  },
+  "letterOfIntent": {
+    "title": "Procedimiento de cartas de intención y contratos",
+    "description": "Las cartas de intención no son compromisos vinculantes. Solo los contratos firmados constituyen compromiso real.",
+    "process": [
+      {
+        "step": "Identificación de interés",
+        "description": "Contacto inicial y exploración de necesidades"
+      },
+      {
+        "step": "Carta de intención",
+        "description": "Documento no vinculante que expresa interés en participar si el proyecto se aprueba"
+      },
+      {
+        "step": "Negociación de términos",
+        "description": "Definición de alcance, aportaciones y contraprestaciones"
+      },
+      {
+        "step": "Contrato firmado",
+        "description": "Acuerdo vinculante con obligaciones y derechos documentados"
+      }
+    ],
+    "warning": "Ninguna carta de intención se presenta en este sitio como contrato firmado. Los documentos privados no se publican.",
+    "currentStatus": "No hay cartas de intención ni contratos firmados publicados"
+  },
+  "pymeSelection": {
+    "title": "Criterios de selección de pymes",
+    "description": "Las pymes participantes se seleccionarán según criterios objetivos y verificables. El objetivo de 12 pymes es una meta de planificación.",
+    "criteria": [
+      "Necesidad documentada de capacidades de IA",
+      "Capacidad de aportar caso de uso y entorno operativo",
+      "Compromiso de participación activa (no meramente testimonial)",
+      "Alineación con sectores prioritarios del proyecto",
+      "Disposición a compartir resultados de forma anonimizada"
+    ],
+    "baseline": "Se establecerá una línea base de indicadores antes de la implantación para medir impacto real.",
+    "demandProof": "La prueba de demanda se construirá con datos verificables, no con declaraciones de intención."
+  }
 }
