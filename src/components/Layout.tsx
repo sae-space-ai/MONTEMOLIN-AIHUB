@@ -12,6 +12,13 @@ export default function Layout() {
 
   useEffect(() => {
     setMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    const frame = requestAnimationFrame(() => {
+      const heading = document.querySelector('main h1');
+      document.title = `${heading?.textContent || 'Inicio'} | MONTEMOLIN-AIHUB`;
+      document.getElementById('main-content')?.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(frame);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -38,6 +45,7 @@ export default function Layout() {
     { to: '/fases/0', label: 'Fases' },
     { to: '/tecnologia', label: 'Tecnología' },
     { to: '/inversion', label: 'Inversión' },
+    { to: '/empresas', label: 'Empresas' },
     { to: '/vision', label: 'Visión' },
     { to: '/transparencia', label: 'Transparencia' },
   ];
@@ -45,7 +53,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-black-deep">
       {/* Skip link */}
-      <a href="#main-content" className="skip-link">
+      <a href="#main-content" className="skip-link" onClick={(event) => { event.preventDefault(); document.getElementById("main-content")?.focus(); }}>
         Saltar al contenido principal
       </a>
 
@@ -68,6 +76,7 @@ export default function Layout() {
                 <Link
                   key={link.to}
                   to={link.to}
+                  aria-current={location.pathname === link.to ? "page" : undefined}
                   className={`px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-green-light hover:text-green-primary ${
                     location.pathname === link.to ? 'nav-link-active' : 'text-gray-700'
                   }`}
@@ -108,6 +117,7 @@ export default function Layout() {
                 <Link
                   key={link.to}
                   to={link.to}
+                  aria-current={location.pathname === link.to ? "page" : undefined}
                   className={`block px-3 py-2 text-base font-medium rounded-md ${
                     location.pathname === link.to
                       ? 'bg-green-light text-green-primary font-semibold'
@@ -123,7 +133,7 @@ export default function Layout() {
       </header>
 
       {/* Main content */}
-      <main id="main-content" className="flex-1">
+      <main id="main-content" tabIndex={-1} className="flex-1 min-w-0">
         <Outlet />
       </main>
 
@@ -162,6 +172,7 @@ export default function Layout() {
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
             <p>© {new Date().getFullYear()} {meta.fullName}. Sitio demostrativo. No constituye comunicación oficial de financiación.</p>
+            <p className="mt-3"><Link to="/privacidad" className="text-gray-300 underline">Privacidad y contacto</Link></p>
             <p className="mt-1">Región: {meta.region} · NUTS2: {meta.nuts2}</p>
           </div>
         </div>

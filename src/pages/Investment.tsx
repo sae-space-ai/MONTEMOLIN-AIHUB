@@ -28,7 +28,7 @@ export default function Investment() {
         <header className="mb-10">
           <h1 className="text-3xl sm:text-4xl font-bold text-black-deep">Inversión y presupuesto</h1>
           <p className="text-lg text-gray-600 mt-3">
-            Desglose del escenario presupuestario del proyecto. Todas las cifras son estimaciones de planificación 
+            Desglose del escenario presupuestario del proyecto. Todas las cifras son estimaciones de planificación
             sujetas a verificación con el texto vigente de la convocatoria y costes elegibles correctamente clasificados.
           </p>
         </header>
@@ -55,20 +55,20 @@ export default function Investment() {
         </section>
 
         <section aria-labelledby="investment-rules" className="mb-12">
-          <h2 id="investment-rules" className="text-2xl font-bold text-black-deep mb-4">Reglas de inversión I3</h2>
+          <h2 id="investment-rules" className="text-2xl font-bold text-black-deep mb-4">Hipótesis de inversión pendientes de contraste I3</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            La convocatoria I3 establece umbrales mínimos de inversión empresarial y gasto regional que deben verificarse 
+            La planificación contempla hipótesis de inversión empresarial y gasto regional que deben verificarse
             con el texto vigente. Los porcentajes citados son reglas a comprobar, no certificaciones.
           </p>
           <div className="space-y-4">
             <div className="bg-white border border-gray-200 rounded-lg p-5">
-              <h3 className="font-semibold text-black-deep mb-2">70 % de costes directos elegibles</h3>
+              <h3 className="font-semibold text-black-deep mb-2">Hipótesis: 70 % de costes directos elegibles</h3>
               <p className="text-sm text-gray-600">
                 Destinados a inversiones empresariales. Los importes de terceros no son financiación comprometida sin prueba.
               </p>
             </div>
             <div className="bg-white border border-gray-200 rounded-lg p-5">
-              <h3 className="font-semibold text-black-deep mb-2">50 % de costes elegibles en regiones menos desarrolladas</h3>
+              <h3 className="font-semibold text-black-deep mb-2">Hipótesis: 50 % de costes elegibles en regiones menos desarrolladas</h3>
               <p className="text-sm text-gray-600">
                 Extremadura (ES43) está clasificada como región menos desarrollada. El gasto territorial debe ser trazable.
               </p>
@@ -79,7 +79,7 @@ export default function Investment() {
         <section aria-labelledby="budget-categories" className="mb-12">
           <h2 id="budget-categories" className="text-2xl font-bold text-black-deep mb-4">Categorías presupuestarias</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            La diferenciación entre depreciación, gastos elegibles, indirectos y financiación es esencial para la 
+            La diferenciación entre depreciación, gastos elegibles, indirectos y financiación es esencial para la
             elegibilidad. Las cifras concretas por categoría están pendientes de consolidación en la Fase 0.
           </p>
           <div className="overflow-x-auto">
@@ -120,13 +120,13 @@ export default function Investment() {
         <section aria-labelledby="computing" className="mb-12">
           <h2 id="computing" className="text-2xl font-bold text-black-deep mb-4">Computación: estudio de viabilidad</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            La posible incorporación de equipamiento de alto rendimiento (como NVIDIA DGX B200 o equivalente) se presenta 
+            La posible incorporación de equipamiento de alto rendimiento (como NVIDIA DGX B200 o equivalente) se presenta
             como un estudio de coste y viabilidad, nunca como equipamiento instalado o adquirido.
           </p>
           <div className="bg-green-light border border-green-primary/20 rounded-xl p-6">
             <h3 className="font-semibold text-black-deep mb-2">Criterio de transparencia</h3>
             <p className="text-sm text-gray-700">
-              Cualquier referencia a hardware específico corresponde a un escenario de inversión por evaluar. 
+              Cualquier referencia a hardware específico corresponde a un escenario de inversión por evaluar.
               No se presenta como infraestructura disponible ni como resultado del proyecto.
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function Investment() {
         <section aria-labelledby="candidates" className="mb-12">
           <h2 id="candidates" className="text-2xl font-bold text-black-deep mb-4">Relaciones institucionales candidatas</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Las siguientes entidades son candidatas a explorar colaboración. No se les atribuye presupuesto, 
+            Las siguientes entidades son candidatas a explorar colaboración. No se les atribuye presupuesto,
             financiación, logos, frases, contactos, consentimientos, cartas de apoyo, compromisos ni marcas como aval.
           </p>
           <div className="bg-warning-bg border border-warning-border rounded-lg p-5">

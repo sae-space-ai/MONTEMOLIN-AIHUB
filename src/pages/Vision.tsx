@@ -21,7 +21,7 @@ export default function Vision() {
         <header className="mb-10">
           <h1 className="text-3xl sm:text-4xl font-bold text-black-deep">Visión industrial AION ZERO</h1>
           <p className="text-lg text-gray-600 mt-3">
-            Horizonte industrial a largo plazo que trasciende el alcance del proyecto I3. 
+            Horizonte industrial a largo plazo que trasciende el alcance del proyecto I3.
             Se describe como una aspiración estratégica, no como infraestructura aprobada ni presupuestada.
           </p>
         </header>
@@ -30,9 +30,9 @@ export default function Vision() {
           <h2 id="separation" className="text-2xl font-bold text-black-deep mb-4">Separación del proyecto I3</h2>
           <div className="bg-green-light border border-green-primary/20 rounded-xl p-6 mb-6">
             <p className="text-gray-700 leading-relaxed">
-              La visión de AION ZERO y una posible gigafactoría corresponde a un horizonte industrial distinto. 
-              No puede verse ni presupuestarse como infraestructura I3 ya aprobada. El proyecto I3 tiene un alcance 
-              de 30 meses y un presupuesto escenario de 14 millones de euros, orientado a capacidades empresariales 
+              La visión de AION ZERO y una posible gigafactoría corresponde a un horizonte industrial distinto.
+              No puede verse ni presupuestarse como infraestructura I3 ya aprobada. El proyecto I3 tiene un alcance
+              de 30 meses y un presupuesto escenario de 14 millones de euros, orientado a capacidades empresariales
               de IA, no a construcción de infraestructura computacional a escala.
             </p>
           </div>
@@ -63,8 +63,8 @@ export default function Vision() {
         <section aria-labelledby="gigafactory" className="mb-12">
           <h2 id="gigafactory" className="text-2xl font-bold text-black-deep mb-4">Gigafactoría: concepto separado</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            El término «gigafactoría» se refiere a una posible instalación industrial de gran escala para producción 
-            o procesamiento intensivo. En el contexto de este proyecto, se menciona como una posibilidad futura 
+            El término «gigafactoría» se refiere a una posible instalación industrial de gran escala para producción
+            o procesamiento intensivo. En el contexto de este proyecto, se menciona como una posibilidad futura
             que requiere:
           </p>
           <ul className="space-y-2 text-gray-700 ml-4">
@@ -87,8 +87,8 @@ export default function Vision() {
           </ul>
           <div className="mt-6 bg-warning-bg border border-warning-border rounded-lg p-5">
             <p className="text-sm text-warning-text">
-              <strong>Nota de transparencia:</strong> No se presupuesta la gigafactoría dentro del proyecto I3. 
-              Cualquier referencia corresponde a una visión industrial independiente que podría explorarse 
+              <strong>Nota de transparencia:</strong> No se presupuesta la gigafactoría dentro del proyecto I3.
+              Cualquier referencia corresponde a una visión industrial independiente que podría explorarse
               en fases posteriores si se cumplen las condiciones de demanda y financiación.
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function Vision() {
         <section aria-labelledby="continuity" className="mb-12">
           <h2 id="continuity" className="text-2xl font-bold text-black-deep mb-4">Continuidad postsubvención</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            La Fase 4 del proyecto aborda la sostenibilidad del Hub después de la subvención. El plan de continuidad 
+            La Fase 4 del proyecto aborda la sostenibilidad del Hub después de la subvención. El plan de continuidad
             se basa en ingresos reales, contratos verificados y capacidad de autofinanciación, no en compromisos presumidos.
           </p>
           <div className="bg-white border border-gray-200 rounded-xl p-6">

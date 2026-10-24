@@ -24,7 +24,7 @@ export default function Transparency() {
         <header className="mb-10">
           <h1 className="text-3xl sm:text-4xl font-bold text-black-deep">Transparencia del proyecto</h1>
           <p className="text-lg text-gray-600 mt-3">
-            Distinción entre lo documentado, propuesto, pendiente y verificado. Cada dato tiene un estado 
+            Distinción entre lo documentado, propuesto, pendiente y verificado. Cada dato tiene un estado
             explícito y una fuente de referencia cuando existe.
           </p>
         </header>
@@ -39,7 +39,7 @@ export default function Transparency() {
               <div>
                 <p className="font-semibold text-black-deep">{meta.status}</p>
                 <p className="text-sm text-gray-700 mt-1">
-                  Convocatoria de referencia: {meta.call}. Este sitio tiene carácter demostrativo y no constituye 
+                  Convocatoria de referencia: {meta.call}. Este sitio tiene carácter demostrativo y no constituye
                   comunicación oficial de financiación concedida.
                 </p>
               </div>
@@ -47,6 +47,16 @@ export default function Transparency() {
           </div>
         </section>
 
+        <section aria-labelledby="application-status" className="mb-12">
+          <h2 id="application-status" className="text-2xl font-bold mb-4">Candidatura I3: evidencia y límites</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 space-y-3 text-sm text-gray-700">
+            <p>Referencia de planificación: {meta.call}. No se publica justificante de presentación, número de expediente, evaluación ni resolución de concesión. El estado administrativo de una candidatura no está acreditado en esta web.</p>
+            <p>La entidad solicitante, la representación legal, la composición del consorcio, la titularidad y licencias del software y la cofinanciación requieren documentación antes de asumir compromisos.</p>
+            <p>Las cifras, los porcentajes y los requisitos técnicos de esta propuesta deben contrastarse con los documentos oficiales aplicables. El enlace al portal no certifica elegibilidad ni acredita que la convocatoria esté abierta.</p>
+            <p>Actualización editorial: 24 de octubre de 2026. Las metas empresariales y los servicios descritos son propuestas pendientes de validación.</p>
+            <Link to="/privacidad" className="inline-block text-green-primary underline">Privacidad y estado del contacto</Link>
+          </div>
+        </section>
         <section aria-labelledby="non-claims" className="mb-12">
           <h2 id="non-claims" className="text-2xl font-bold text-black-deep mb-4">Lo que este proyecto NO afirma</h2>
           <ul className="space-y-3">
@@ -148,23 +158,23 @@ export default function Transparency() {
           <h2 id="editorial" className="text-2xl font-bold text-black-deep mb-4">Política editorial</h2>
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 space-y-4 text-sm text-gray-700">
             <p>
-              Este sitio web tiene carácter demostrativo. No constituye una solicitud de subvención, 
+              Este sitio web tiene carácter demostrativo. No constituye una solicitud de subvención,
               un portal de reservas, una tienda ni un acceso a infraestructura en producción.
             </p>
             <p>
-              No se publican datos personales, correos electrónicos privados, domicilios, teléfonos 
+              No se publican datos personales, correos electrónicos privados, domicilios, teléfonos
               ni información de expedientes UE (PIC, borradores privados).
             </p>
             <p>
-              No se utilizan analítica invasiva, cookies no necesarias ni trackers no consentidos. 
-              No hay dependencias externas que expongan automáticamente a los visitantes.
+              No se utilizan analítica invasiva, cookies no necesarias ni trackers no consentidos.
+              El alojamiento puede tratar registros técnicos de conexión. Consulta la página de privacidad para conocer el alcance y los límites del canal de contacto.
             </p>
             <p>
-              No se hacen afirmaciones de cumplimiento GDPR o AI Act como certificación sin auditoría jurídica. 
+              No se hacen afirmaciones de cumplimiento GDPR o AI Act como certificación sin auditoría jurídica.
               Las referencias a normativa son informativas, no constituyen asesoramiento legal.
             </p>
             <p>
-              No se utilizan logotipos institucionales de la Unión Europea, la Junta de Extremadura u otras 
+              No se utilizan logotipos institucionales de la Unión Europea, la Junta de Extremadura u otras
               entidades sin autorización documental explícita.
             </p>
           </div>
@@ -180,7 +190,7 @@ export default function Transparency() {
               <li>• <strong>Nivel TRL</strong> — pendiente de evidencia independiente</li>
               <li>• <strong>Socios del consorcio</strong> — composición por definir</li>
               <li>• <strong>Costes elegibles</strong> — clasificación por verificar con texto de convocatoria</li>
-              <li>• <strong>Dominio web</strong> — no registrado aún</li>
+              <li>• <strong>Web pública</strong> — montemolin-aihub.vercel.app; la disponibilidad del sitio no acredita una entidad jurídica ni infraestructura física operativa</li>
               <li>• <strong>Acuerdos con terceros</strong> — sin firmas ni compromisos</li>
             </ul>
           </div>
