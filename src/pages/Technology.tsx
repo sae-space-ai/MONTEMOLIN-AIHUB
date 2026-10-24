@@ -24,7 +24,7 @@ export default function Technology() {
         <header className="mb-10">
           <h1 className="text-3xl sm:text-4xl font-bold text-black-deep">Ecosistema tecnológico</h1>
           <p className="text-lg text-gray-600 mt-3">
-            Líneas de trabajo del Hub para capacidades de IA empresarial. Cada componente se describe con su estado real 
+            Líneas de trabajo del Hub para capacidades de IA empresarial. Cada componente se describe con su estado real
             de madurez, sin atribuir niveles TRL no demostrados.
           </p>
         </header>
@@ -57,7 +57,7 @@ export default function Technology() {
         <section aria-labelledby="architecture" className="mb-12">
           <h2 id="architecture" className="text-2xl font-bold text-black-deep mb-4">Arquitectura prevista</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            La arquitectura tecnológica se plantea como modular, interoperable y eficiente. Los componentes se integrarán 
+            La arquitectura tecnológica se plantea como modular, interoperable y eficiente. Los componentes se integrarán
             de forma controlada, con pruebas de aceptación y una línea base comparable para los pilotos empresariales.
           </p>
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
@@ -90,14 +90,14 @@ export default function Technology() {
         <section aria-labelledby="trl" className="mb-12">
           <h2 id="trl" className="text-2xl font-bold text-black-deep mb-4">Nivel de madurez tecnológica (TRL)</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            La convocatoria I3 requiere una solución empresarial con TRL inicial mínimo 6 comprobado. 
+            La convocatoria I3 requiere una solución empresarial con TRL inicial mínimo 6 comprobado.
             Actualmente no se atribuye este nivel a los componentes propios sin evidencia independiente.
           </p>
           <div className="bg-green-light border border-green-primary/20 rounded-xl p-6">
             <h3 className="font-semibold text-black-deep mb-3">Criterio de la Fase 1</h3>
             <p className="text-sm text-gray-700">
-              Se buscará una configuración de IA empresarial de partida con TRL 6 demostrado mediante evidencia 
-              independiente. Si la evidencia falta, no se declarará cumplimiento. Los prototipos propios no se 
+              Se buscará una configuración de IA empresarial de partida con TRL 6 demostrado mediante evidencia
+              independiente. Si la evidencia falta, no se declarará cumplimiento. Los prototipos propios no se
               presentarán como productos maduros.
             </p>
           </div>
@@ -106,8 +106,8 @@ export default function Technology() {
         <section aria-labelledby="ip" className="mb-12">
           <h2 id="ip" className="text-2xl font-bold text-black-deep mb-4">Propiedad intelectual y licencias</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            La titularidad del software y los servicios es materia de inventario y acuerdos reales. No se obtiene 
-            mostrando números en el sitio. Los derechos sobre tecnología propia y ajena se registrarán en la Fase 3 
+            La titularidad del software y los servicios es materia de inventario y acuerdos reales. No se obtiene
+            mostrando números en el sitio. Los derechos sobre tecnología propia y ajena se registrarán en la Fase 3
             con condiciones transparentes.
           </p>
           <div className="bg-warning-bg border border-warning-border rounded-lg p-5">

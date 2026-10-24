@@ -24,7 +24,7 @@
       "description": "Establecer la identidad del Hub, la gobernanza, el perímetro jurídico y la colaboración interregional. La sede territorial prevista es Montemolín, Extremadura, región menos desarrollada en el marco de cohesión de la UE.",
       "goals": [
         "Definir el modelo de gobernanza y los derechos sobre la tecnología previa.",
-        "Seleccionar socios elegibles de al menos tres regiones y dos países.",
+        "Identificar socios y contrastar el número de regiones y países exigidos en el texto oficial aplicable.",
         "Justificar la coherencia S3/RIS3 de cada región participante.",
         "Acordar un presupuesto verificable, con inversiones y aportaciones identificadas."
       ],
@@ -79,7 +79,7 @@
       "goals": [
         "Concretar tres casos de inversión como objetivo de planificación, no como compromisos actuales.",
         "Construir una cartera inicial objetivo de 12 pymes con necesidades medibles.",
-        "Verificar el umbral I3 de inversión empresarial y gasto en regiones menos desarrolladas.",
+        "Contrastar las hipótesis de inversión empresarial y gasto regional con los documentos oficiales I3.",
         "Implantar soluciones en entornos operativos reales y medir productividad y adopción."
       ],
       "outputs": [
@@ -89,8 +89,8 @@
         "Datos comparativos antes/después de la implantación."
       ],
       "gates": [
-        "70 % de costes directos elegibles destinados a inversiones empresariales.",
-        "50 % de costes elegibles en regiones menos desarrolladas.",
+        "Contraste documental de la hipótesis del 70 % de costes directos elegibles para inversión empresarial.",
+        "Contraste documental de la hipótesis del 50 % de costes elegibles en regiones menos desarrolladas.",
         "Los importes de terceros no son financiación comprometida sin prueba."
       ],
       "workpacks": "WP3 · WP4 · WP6"

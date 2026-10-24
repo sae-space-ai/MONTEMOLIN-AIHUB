@@ -90,3 +90,9 @@ html {
   font-weight: 600;
   border-bottom: 2px solid var(--color-green-primary);
 }
+
+/* Keep long project names and figures within narrow screens. */
+main { overflow-wrap: anywhere; }
+button, summary { min-height: 44px; }
+.text-gray-500 { color: #626262; }
+@media (max-width: 380px) { main .text-3xl { font-size: 1.65rem; } }

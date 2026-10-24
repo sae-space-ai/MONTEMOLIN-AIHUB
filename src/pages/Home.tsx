@@ -27,12 +27,12 @@ export default function Home() {
             Capacidades de IA empresarial desde Extremadura hacia cadenas de valor europeas
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-gray-600 leading-relaxed">
-            Una propuesta para construir un Hub de inteligencia artificial confiable en Montemolín, 
-            región menos desarrollada (NUTS2 ES43), orientado a la innovación, implantación y 
+            Una propuesta para construir un Hub de inteligencia artificial confiable en Montemolín,
+            región menos desarrollada (NUTS2 ES43), orientado a la innovación, implantación y
             comercialización de soluciones de IA para pymes y empresas europeas.
           </p>
           <p className="mt-4 text-base text-gray-600">
-            Misión: crear capacidades reales de adopción tecnológica en el territorio, conectando 
+            Misión: crear capacidades reales de adopción tecnológica en el territorio, conectando
             regiones europeas mediante cooperación interregional y evidencia verificable.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -55,6 +55,11 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12" aria-labelledby="business-title">
+        <h2 id="business-title" className="text-2xl font-bold">Una propuesta para empresas</h2>
+        <p className="mt-3 text-gray-600 max-w-3xl">Diagnóstico, implantación y seguimiento de IA documental, automatización y gobernanza. Servicios propuestos, sujetos a capacidad validada, alcance acordado y presupuesto individual.</p>
+        <Link to="/empresas" className="inline-block mt-4 text-green-primary font-semibold underline">Explorar servicios y proceso de colaboración</Link>
+      </section>
       {/* Metrics */}
       <section className="bg-gray-50 py-12 sm:py-16" aria-labelledby="metrics-title">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -220,7 +225,7 @@ export default function Home() {
                 <svg className="w-5 h-5 text-green-primary group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
               </summary>
               <p className="mt-3 text-gray-600 text-sm">
-                No. El proyecto está en preparación. La convocatoria de referencia es I3-2026-INV2a y no se ha resuelto. 
+                No. El proyecto está en preparación. La convocatoria de referencia es I3-2026-INV2a. El estado administrativo de una solicitud no está acreditado públicamente en este sitio.
                 Las cifras de presupuesto son un escenario de planificación.
               </p>
             </details>
@@ -230,7 +235,7 @@ export default function Home() {
                 <svg className="w-5 h-5 text-green-primary group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
               </summary>
               <p className="mt-3 text-gray-600 text-sm">
-                La composición del consorcio está pendiente. Entidades como ACS, Telefónica, Banco Santander o la Junta de Extremadura 
+                La composición del consorcio está pendiente. Entidades como ACS, Telefónica, Banco Santander o la Junta de Extremadura
                 son candidatas a explorar, no socios confirmados. No se atribuyen compromisos, logos ni cartas de apoyo.
               </p>
             </details>
@@ -240,7 +245,7 @@ export default function Home() {
                 <svg className="w-5 h-5 text-green-primary group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
               </summary>
               <p className="mt-3 text-gray-600 text-sm">
-                No hay justificación suficiente para presentarlos como TRL 6 acreditado. Son líneas tecnológicas del ecosistema 
+                No hay justificación suficiente para presentarlos como TRL 6 acreditado. Son líneas tecnológicas del ecosistema
                 en desarrollo. Se buscará una configuración de partida con TRL 6 demostrado mediante evidencia independiente.
               </p>
             </details>
@@ -250,7 +255,7 @@ export default function Home() {
                 <svg className="w-5 h-5 text-green-primary group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
               </summary>
               <p className="mt-3 text-gray-600 text-sm">
-                Es una visión industrial a largo plazo, separada del alcance financiable I3. No se presupuesta ni se presenta 
+                Es una visión industrial a largo plazo, separada del alcance financiable I3. No se presupuesta ni se presenta
                 como infraestructura aprobada dentro de este proyecto.
               </p>
             </details>
@@ -260,7 +265,7 @@ export default function Home() {
                 <svg className="w-5 h-5 text-green-primary group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
               </summary>
               <p className="mt-3 text-gray-600 text-sm">
-                La sede territorial prevista es Montemolín, Badajoz, Extremadura (NUTS2 ES43), clasificada como región menos 
+                La sede territorial prevista es Montemolín, Badajoz, Extremadura (NUTS2 ES43), clasificada como región menos
                 desarrollada en el marco de cohesión de la Unión Europea.
               </p>
             </details>
