@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos - Prueba Independiente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #006B3F;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .warning {
+            background-color: #FEF3C7;
+            border: 2px solid #F59E0B;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            color: #92400E;
+        }
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .module-card {
+            border: 2px solid #006B3F;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: white;
+        }
+        .module-card h2 {
+            color: #006B3F;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .module-card .location {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .module-card .focus {
+            color: #006B3F;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .module-card .section {
+            margin-bottom: 15px;
+        }
+        .module-card .section h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .module-card ul {
+            padding-left: 20px;
+        }
+        .module-card li {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+        .evidence-item {
+            background-color: #f5f5f5;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+        }
+        .evidence-item strong {
+            font-size: 14px;
+        }
+        .evidence-item p {
+            font-size: 12px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .evidence-item span {
+            font-size: 12px;
+            color: #F59E0B;
+        }
+        .tracking {
+            background-color: #E8F5E9;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .tracking h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #006B3F;
+        }
+        .tracking-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 14px;
+        }
+        .nav {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .nav a {
+            color: #006B3F;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Módulos operativos del Hub</h1>
+        <p class="description">Iniciativas territoriales integradas en MONTEMOLIN-AIHUB. Cada módulo tiene ficha, objetivos, tareas, evidencias y seguimiento propios.</p>
+        
+        <div class="warning">
+            <strong>⚠️ Módulos en definición.</strong>
+            <p>Los objetivos, tareas y evidencias están por completar.</p>
+        </div>
+
+        <div class="modules-grid" id="modules-container">
+            <!-- Los módulos se cargarán aquí dinámicamente -->
+        </div>
+
+        <div class="nav">
+            <a href="/">← Volver al inicio</a>
+            <a href="/tecnologia">Ir a Tecnología →</a>
+        </div>
+    </div>
+
+    <script>
+        // Datos de los módulos (extraídos de project.json)
+        const modules = {
+            "title": "Módulos operativos del Hub",
+            "description": "Iniciativas territoriales integradas en MONTEMOLIN-AIHUB.",
+            "items": [
+                {
+                    "id": "ia-iren-badajoz",
+                    "name": "IA IREN Badajoz",
+                    "location": "Badajoz",
+                    "focus": "Inteligencia Artificial aplicada a gestión de recursos y servicios urbanos",
+                    "description": "Módulo dedicado al desarrollo e implantación de soluciones de IA para la gestión eficiente de recursos hídricos, energéticos y servicios urbanos en el área metropolitana de Badajoz.",
+                    "objectives": [
+                        "Desarrollar sistemas de IA para optimización de recursos hídricos",
+                        "Implementar soluciones de predicción de demanda energética",
+                        "Crear plataformas de monitorización inteligente de servicios urbanos",
+                        "Establecer indicadores de eficiencia y sostenibilidad medibles"
+                    ],
+                    "tasks": [
+                        "Análisis de necesidades y casos de uso con gestores de recursos",
+                        "Diseño de arquitectura de datos y sensores",
+                        "Desarrollo de modelos predictivos",
+                        "Pruebas piloto en entornos controlados",
+                        "Despliegue y monitorización de resultados"
+                    ],
+                    "evidence": [
+                        {
+                            "type": "Estudio de necesidades",
+                            "status": "pendiente",
+                            "description": "Análisis documentado de casos de uso y requisitos"
+                        },
+                        {
+                            "type": "Arquitectura técnica",
+                            "status": "pendiente",
+                            "description": "Diseño de sistema de datos y modelos"
+                        },
+                        {
+                            "type": "Resultados de pruebas",
+                            "status": "pendiente",
+                            "description": "Métricas de eficiencia y precisión en entorno controlado"
+                        }
+                    ],
+                    "tracking": {
+                        "status": "En definición",
+                        "progress": "0%",
+                        "nextMilestone": "Completar estudio de necesidades",
+                        "lastUpdate": "Pendiente de primera actualización"
+                    }
+                },
+                {
+                    "id": "innovacion-territorial",
+                    "name": "Innovación Territorial",
+                    "location": "Extremadura (transversal)",
+                    "focus": "Desarrollo de capacidades de innovación en el tejido empresarial extremeño",
+                    "description": "Módulo transversal orientado a fortalecer las capacidades de innovación tecnológica en pymes y empresas de Extremadura, facilitando la adopción de IA y otras tecnologías avanzadas.",
+                    "objectives": [
+                        "Mapear capacidades de innovación en el tejido empresarial regional",
+                        "Diseñar programas de capacitación en IA empresarial",
+                        "Facilitar transferencia tecnológica entre centros de investigación y empresas",
+                        "Crear red de empresas piloto para validación de soluciones"
+                    ],
+                    "tasks": [
+                        "Diagnóstico de capacidades de innovación por sectores",
+                        "Diseño de itinerarios formativos adaptados",
+                        "Establecimiento de convenios con centros tecnológicos",
+                        "Selección y acompañamiento de empresas piloto",
+                        "Medición de impacto y difusión de resultados"
+                    ],
+                    "evidence": [
+                        {
+                            "type": "Mapa de capacidades",
+                            "status": "pendiente",
+                            "description": "Inventario documentado de capacidades de innovación regional"
+                        },
+                        {
+                            "type": "Programas formativos",
+                            "status": "pendiente",
+                            "description": "Diseño y validación de itinerarios de capacitación"
+                        },
+                        {
+                            "type": "Red de empresas piloto",
+                            "status": "pendiente",
+                            "description": "Acuerdos con empresas para validación de soluciones"
+                        }
+                    ],
+                    "tracking": {
+                        "status": "En definición",
+                        "progress": "0%",
+                        "nextMilestone": "Completar diagnóstico de capacidades",
+                        "lastUpdate": "Pendiente de primera actualización"
+                    }
+                },
+                {
+                    "id": "lusitanus-merida",
+                    "name": "Lusitanus Mérida",
+                    "location": "Mérida",
+                    "focus": "Patrimonio cultural y turismo inteligente mediante IA",
+                    "description": "Módulo centrado en la aplicación de tecnologías de IA para la valorizzazione del patrimonio cultural extremeño y el desarrollo de experiencias turísticas inteligentes en Mérida y su entorno.",
+                    "objectives": [
+                        "Digitalización inteligente del patrimonio cultural",
+                        "Desarrollo de experiencias turísticas personalizadas con IA",
+                        "Creación de sistemas de recomendación contextual",
+                        "Optimización de flujos turísticos y gestión de visitantes"
+                    ],
+                    "tasks": [
+                        "Inventario de activos patrimoniales digitalizables",
+                        "Diseño de experiencias inmersivas y personalizadas",
+                        "Desarrollo de algoritmos de recomendación",
+                        "Integración con sistemas de gestión turística",
+                        "Pruebas con visitantes y ajuste de modelos"
+                    ],
+                    "evidence": [
+                        {
+                            "type": "Inventario patrimonial",
+                            "status": "pendiente",
+                            "description": "Catálogo de activos culturales digitalizables"
+                        },
+                        {
+                            "type": "Prototipos de experiencias",
+                            "status": "pendiente",
+                            "description": "Diseño y validación de experiencias turísticas IA"
+                        },
+                        {
+                            "type": "Métricas de uso",
+                            "status": "pendiente",
+                            "description": "Datos de adopción y satisfacción de visitantes"
+                        }
+                    ],
+                    "tracking": {
+                        "status": "En definición",
+                        "progress": "0%",
+                        "nextMilestone": "Completar inventario patrimonial",
+                        "lastUpdate": "Pendiente de primera actualización"
+                    }
+                },
+                {
+                    "id": "merlin-edged-montemolin",
+                    "name": "Merlin Edged Montemolín",
+                    "location": "Montemolín",
+                    "focus": "Edge computing e IA distribuida para entornos industriales y rurales",
+                    "description": "Módulo dedicado al desarrollo de soluciones de edge computing e inteligencia artificial distribuida, optimizadas para entornos industriales y rurales con conectividad limitada.",
+                    "objectives": [
+                        "Desarrollar arquitecturas de edge computing para IA",
+                        "Optimizar modelos de IA para ejecución en dispositivos edge",
+                        "Crear soluciones para entornos con conectividad intermitente",
+                        "Establecer casos de uso industriales y agroalimentarios"
+                    ],
+                    "tasks": [
+                        "Diseño de arquitectura edge distribuida",
+                        "Selección y adaptación de modelos para edge",
+                        "Desarrollo de sistemas de sincronización",
+                        "Pruebas en entornos industriales reales",
+                        "Optimización de consumo energético y latencia"
+                    ],
+                    "evidence": [
+                        {
+                            "type": "Arquitectura edge",
+                            "status": "pendiente",
+                            "description": "Diseño técnico de sistema distribuido"
+                        },
+                        {
+                            "type": "Modelos optimizados",
+                            "status": "pendiente",
+                            "description": "Modelos de IA adaptados para ejecución edge"
+                        },
+                        {
+                            "type": "Casos de uso validados",
+                            "status": "pendiente",
+                            "description": "Resultados de pruebas en entornos reales"
+                        }
+                    ],
+                    "tracking": {
+                        "status": "En definición",
+                        "progress": "0%",
+                        "nextMilestone": "Completar diseño de arquitectura edge",
+                        "lastUpdate": "Pendiente de primera actualización"
+                    }
+                }
+            ]
+        };
+
+        // Renderizar los módulos
+        const container = document.getElementById('modules-container');
+        
+        modules.items.forEach(mod => {
+            const card = document.createElement('div');
+            card.className = 'module-card';
+            
+            card.innerHTML = `
+                <h2>${mod.name}</h2>
+                <p class="location">📍 ${mod.location}</p>
+                <p class="focus">${mod.focus}</p>
+                <p>${mod.description}</p>
+                
+                <div class="section">
+                    <h3>✅ Objetivos (${mod.objectives.length})</h3>
+                    <ul>
+                        ${mod.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h3>📋 Tareas (${mod.tasks.length})</h3>
+                    <ul>
+                        ${mod.tasks.map(task => `<li>${task}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h3>📊 Evidencias (${mod.evidence.length})</h3>
+                    ${mod.evidence.map(ev => `
+                        <div class="evidence-item">
+                            <strong>${ev.type}</strong>
+                            <p>${ev.description}</p>
+                            <span>Estado: ${ev.status}</span>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <div class="tracking">
+                    <h3>📈 Seguimiento</h3>
+                    <div class="tracking-grid">
+                        <div><strong>Estado:</strong> ${mod.tracking.status}</div>
+                        <div><strong>Progreso:</strong> ${mod.tracking.progress}</div>
+                        <div><strong>Próximo Hito:</strong> ${mod.tracking.nextMilestone}</div>
+                        <div><strong>Última Actualización:</strong> ${mod.tracking.lastUpdate}</div>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(card);
+        });
+
+        console.log('✅ Página de prueba cargada correctamente');
+        console.log('Total de módulos:', modules.items.length);
+    </script>
+</body>
+</html>
