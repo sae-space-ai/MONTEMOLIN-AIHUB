@@ -46,6 +46,7 @@ export default function Layout() {
     { to: '/tecnologia', label: 'Tecnología' },
     { to: '/inversion', label: 'Inversión' },
     { to: '/empresas', label: 'Empresas' },
+    { to: '/pilotos', label: 'Pilotos' },
     { to: '/vision', label: 'Visión' },
     { to: '/transparencia', label: 'Transparencia' },
   ];
@@ -71,7 +72,7 @@ export default function Layout() {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-1" aria-label="Navegación principal">
+            <nav className="hidden xl:flex items-center gap-1" aria-label="Navegación principal">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
@@ -90,7 +91,7 @@ export default function Layout() {
             <button
               ref={menuButtonRef}
               type="button"
-              className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus-visible:outline-green-primary"
+              className="xl:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus-visible:outline-green-primary"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               aria-label={menuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'}
@@ -111,7 +112,7 @@ export default function Layout() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <nav id="mobile-menu" className="lg:hidden border-t border-gray-200 bg-white" aria-label="Navegación móvil">
+          <nav id="mobile-menu" className="xl:hidden border-t border-gray-200 bg-white" aria-label="Navegación móvil">
             <div className="px-4 py-3 space-y-1">
               {navLinks.map((link) => (
                 <Link

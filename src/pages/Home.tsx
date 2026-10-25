@@ -60,6 +60,7 @@ export default function Home() {
         <p className="mt-3 text-gray-600 max-w-3xl">Diagnóstico, implantación y seguimiento de IA documental, automatización y gobernanza. Servicios propuestos, sujetos a capacidad validada, alcance acordado y presupuesto individual.</p>
         <Link to="/empresas" className="inline-block mt-4 text-green-primary font-semibold underline">Explorar servicios y proceso de colaboración</Link>
       </section>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12" aria-labelledby="pilots-title"><h2 id="pilots-title" className="text-2xl font-bold">Cuatro pilotos en preparación</h2><p className="mt-3 text-gray-600">Fichas y seguimiento local de propuestas. Participación y acuerdos pendientes de acreditación.</p><Link className="inline-block mt-4 underline text-green-primary font-semibold" to="/pilotos">Abrir cartera de pilotos</Link></section>
       {/* Metrics */}
       <section className="bg-gray-50 py-12 sm:py-16" aria-labelledby="metrics-title">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
