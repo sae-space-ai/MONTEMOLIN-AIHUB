@@ -134,6 +134,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Modules overview */}
+      <section className="bg-gray-50 py-12 sm:py-16" aria-labelledby="modules-title">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 id="modules-title" className="text-2xl sm:text-3xl font-bold mb-3">
+            Módulos operativos territoriales
+          </h2>
+          <p className="text-gray-600 mb-8 max-w-2xl">
+            Iniciativas territoriales integradas en el Hub, cada una con ficha, objetivos, tareas, evidencias y seguimiento propios.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {projectData.modules.items.map((mod) => (
+              <Link
+                key={mod.id}
+                to="/modulos"
+                className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-green-primary transition-colors no-underline"
+              >
+                <div className="text-xs font-bold text-green-primary uppercase tracking-wide mb-2">
+                  {mod.location}
+                </div>
+                <h3 className="font-bold text-black-deep text-sm sm:text-base mb-2">{mod.name}</h3>
+                <p className="text-xs text-gray-600 line-clamp-2 mb-3">{mod.focus}</p>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded font-medium">
+                    {mod.tracking.status}
+                  </span>
+                  <span className="text-xs text-gray-500">{mod.tracking.progress}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <Link
+              to="/modulos"
+              className="inline-flex items-center gap-2 text-green-primary font-semibold hover:underline"
+            >
+              Ver todos los módulos
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Technology overview */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16" aria-labelledby="tech-title">
         <h2 id="tech-title" className="text-2xl sm:text-3xl font-bold mb-3">
