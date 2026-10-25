@@ -4,15 +4,22 @@
 
 > ⚠️ **Proyecto en preparación.** Este sitio tiene carácter demostrativo. No se ha concedido financiación de la Unión Europea. Convocatoria de referencia: I3-2026-INV2a.
 
-## Estado actual — Fase 4 completada
+## Estado actual — Fase 4 completada + Módulos integrados
 
-El proyecto ha completado las cuatro fases de desarrollo:
+El proyecto ha completado las cuatro fases de desarrollo y ha integrado cuatro módulos operativos territoriales:
 
+### Fases del Proyecto
 - **Fase 0**: Fundamentos y cohesión — Landing, rutas 0-4, datos canónicos
 - **Fase 1**: Tecnología preparada — Arquitectura, evidencias TRL, seguridad
 - **Fase 2**: Inversión interregional — Presupuestos trazables, simulador local
 - **Fase 3**: Mercado y monetización — Oferta hipotética, IP, casos simulados
 - **Fase 4**: Continuidad y escalado — Sostenibilidad, escenarios, auditoría final
+
+### Módulos Operativos Integrados
+- **IA IREN Badajoz** — IA aplicada a gestión de recursos y servicios urbanos
+- **Innovación Territorial** — Capacidades de innovación en tejido empresarial extremeño
+- **Lusitanus Mérida** — Patrimonio cultural y turismo inteligente mediante IA
+- **Merlin Edged Montemolín** — Edge computing e IA distribuida para entornos industriales y rurales
 
 ## Estructura del proyecto
 
@@ -42,6 +49,7 @@ El proyecto ha completado las cuatro fases de desarrollo:
 │       ├── Security.tsx         # Seguridad y gobernanza de IA
 │       ├── Investment.tsx       # Presupuesto e inversión
 │       ├── Commercial.tsx       # Comercialización y propiedad intelectual
+│       ├── Modules.tsx          # Módulos operativos territoriales
 │       ├── Continuity.tsx       # Continuidad y escalado post-subvención
 │       ├── Vision.tsx           # Visión industrial AION ZERO
 │       └── Transparency.tsx     # Transparencia y fuentes
@@ -188,13 +196,15 @@ Ver [docs/PUBLISHING_GUIDE.md](docs/PUBLISHING_GUIDE.md) para más detalles.
 4. **Seguridad** (`/seguridad`) — Gobernanza de IA
 5. **Inversión** (`/inversion`) — Presupuesto y simulador
 6. **Comercialización** (`/comercializacion`) — Oferta hipotética e IP
-7. **Continuidad** (`/continuidad`) — Sostenibilidad post-subvención
-8. **Visión** (`/vision`) — AION ZERO y gigafactoría
-9. **Transparencia** (`/transparencia`) — Fuentes y estado de datos
+7. **Módulos** (`/modulos`) — Módulos operativos territoriales (IA IREN, Innovación Territorial, Lusitanus, Merlin Edged)
+8. **Continuidad** (`/continuidad`) — Sostenibilidad post-subvención
+9. **Visión** (`/vision`) — AION ZERO y gigafactoría
+10. **Transparencia** (`/transparencia`) — Fuentes y estado de datos
 
 ## Documentación adicional
 
 - [CHANGELOG.md](CHANGELOG.md) — Historial de cambios
+- [INTEGRACION_MODULOS.md](INTEGRACION_MODULOS.md) — Integración de módulos operativos
 - [docs/PUBLISHING_GUIDE.md](docs/PUBLISHING_GUIDE.md) — Guía de publicación segura
 - [docs/PR_CHECKLIST.md](docs/PR_CHECKLIST.md) — Checklist de revisión PR
 - [FASE1_ENTREGA.md](FASE1_ENTREGA.md) — Documento de entrega Fase 1
@@ -218,6 +228,6 @@ Este repositorio es una propuesta demostrativa. La propiedad intelectual del sof
 
 ---
 
-**Última actualización**: Fase 4 (2026)
+**Última actualización**: Integración de módulos operativos (2026)
 **Estado**: Listo para desplegar (pendiente de configuración de dominio y despliegue)
-**Versión**: 0.4.0
+**Versión**: 0.5.0

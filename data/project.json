@@ -909,5 +909,183 @@
     ],
     "warning": "Este documento es orientativo. Los contratos reales requerirán asesoramiento jurídico independiente.",
     "status": "Borrador interno — no publicado como contrato"
+  },
+  "modules": {
+    "title": "Módulos operativos del Hub",
+    "description": "Iniciativas territoriales integradas en MONTEMOLIN-AIHUB. Cada módulo tiene ficha, objetivos, tareas, evidencias y seguimiento propios.",
+    "items": [
+      {
+        "id": "ia-iren-badajoz",
+        "name": "IA IREN Badajoz",
+        "location": "Badajoz",
+        "focus": "Inteligencia Artificial aplicada a gestión de recursos y servicios urbanos",
+        "description": "Módulo dedicado al desarrollo e implantación de soluciones de IA para la gestión eficiente de recursos hídricos, energéticos y servicios urbanos en el área metropolitana de Badajoz.",
+        "objectives": [
+          "Desarrollar sistemas de IA para optimización de recursos hídricos",
+          "Implementar soluciones de predicción de demanda energética",
+          "Crear plataformas de monitorización inteligente de servicios urbanos",
+          "Establecer indicadores de eficiencia y sostenibilidad medibles"
+        ],
+        "tasks": [
+          "Análisis de necesidades y casos de uso con gestores de recursos",
+          "Diseño de arquitectura de datos y sensores",
+          "Desarrollo de modelos predictivos",
+          "Pruebas piloto en entornos controlados",
+          "Despliegue y monitorización de resultados"
+        ],
+        "evidence": [
+          {
+            "type": "Estudio de necesidades",
+            "status": "pendiente",
+            "description": "Análisis documentado de casos de uso y requisitos"
+          },
+          {
+            "type": "Arquitectura técnica",
+            "status": "pendiente",
+            "description": "Diseño de sistema de datos y modelos"
+          },
+          {
+            "type": "Resultados de pruebas",
+            "status": "pendiente",
+            "description": "Métricas de eficiencia y precisión en entorno controlado"
+          }
+        ],
+        "tracking": {
+          "status": "En definición",
+          "progress": "0%",
+          "nextMilestone": "Completar estudio de necesidades",
+          "lastUpdate": "Pendiente de primera actualización"
+        }
+      },
+      {
+        "id": "innovacion-territorial",
+        "name": "Innovación Territorial",
+        "location": "Extremadura (transversal)",
+        "focus": "Desarrollo de capacidades de innovación en el tejido empresarial extremeño",
+        "description": "Módulo transversal orientado a fortalecer las capacidades de innovación tecnológica en pymes y empresas de Extremadura, facilitando la adopción de IA y otras tecnologías avanzadas.",
+        "objectives": [
+          "Mapear capacidades de innovación en el tejido empresarial regional",
+          "Diseñar programas de capacitación en IA empresarial",
+          "Facilitar transferencia tecnológica entre centros de investigación y empresas",
+          "Crear red de empresas piloto para validación de soluciones"
+        ],
+        "tasks": [
+          "Diagnóstico de capacidades de innovación por sectores",
+          "Diseño de itinerarios formativos adaptados",
+          "Establecimiento de convenios con centros tecnológicos",
+          "Selección y acompañamiento de empresas piloto",
+          "Medición de impacto y difusión de resultados"
+        ],
+        "evidence": [
+          {
+            "type": "Mapa de capacidades",
+            "status": "pendiente",
+            "description": "Inventario documentado de capacidades de innovación regional"
+          },
+          {
+            "type": "Programas formativos",
+            "status": "pendiente",
+            "description": "Diseño y validación de itinerarios de capacitación"
+          },
+          {
+            "type": "Red de empresas piloto",
+            "status": "pendiente",
+            "description": "Acuerdos con empresas para validación de soluciones"
+          }
+        ],
+        "tracking": {
+          "status": "En definición",
+          "progress": "0%",
+          "nextMilestone": "Completar diagnóstico de capacidades",
+          "lastUpdate": "Pendiente de primera actualización"
+        }
+      },
+      {
+        "id": "lusitanus-merida",
+        "name": "Lusitanus Mérida",
+        "location": "Mérida",
+        "focus": "Patrimonio cultural y turismo inteligente mediante IA",
+        "description": "Módulo centrado en la aplicación de tecnologías de IA para la valorizzazione del patrimonio cultural extremeño y el desarrollo de experiencias turísticas inteligentes en Mérida y su entorno.",
+        "objectives": [
+          "Digitalización inteligente del patrimonio cultural",
+          "Desarrollo de experiencias turísticas personalizadas con IA",
+          "Creación de sistemas de recomendación contextual",
+          "Optimización de flujos turísticos y gestión de visitantes"
+        ],
+        "tasks": [
+          "Inventario de activos patrimoniales digitalizables",
+          "Diseño de experiencias inmersivas y personalizadas",
+          "Desarrollo de algoritmos de recomendación",
+          "Integración con sistemas de gestión turística",
+          "Pruebas con visitantes y ajuste de modelos"
+        ],
+        "evidence": [
+          {
+            "type": "Inventario patrimonial",
+            "status": "pendiente",
+            "description": "Catálogo de activos culturales digitalizables"
+          },
+          {
+            "type": "Prototipos de experiencias",
+            "status": "pendiente",
+            "description": "Diseño y validación de experiencias turísticas IA"
+          },
+          {
+            "type": "Métricas de uso",
+            "status": "pendiente",
+            "description": "Datos de adopción y satisfacción de visitantes"
+          }
+        ],
+        "tracking": {
+          "status": "En definición",
+          "progress": "0%",
+          "nextMilestone": "Completar inventario patrimonial",
+          "lastUpdate": "Pendiente de primera actualización"
+        }
+      },
+      {
+        "id": "merlin-edged-montemolin",
+        "name": "Merlin Edged Montemolín",
+        "location": "Montemolín",
+        "focus": "Edge computing e IA distribuida para entornos industriales y rurales",
+        "description": "Módulo dedicado al desarrollo de soluciones de edge computing e inteligencia artificial distribuida, optimizadas para entornos industriales y rurales con conectividad limitada, aprovechando la ubicación estratégica de Montemolín.",
+        "objectives": [
+          "Desarrollar arquitecturas de edge computing para IA",
+          "Optimizar modelos de IA para ejecución en dispositivos edge",
+          "Crear soluciones para entornos con conectividad intermitente",
+          "Establecer casos de uso industriales y agroalimentarios"
+        ],
+        "tasks": [
+          "Diseño de arquitectura edge distribuida",
+          "Selección y adaptación de modelos para edge",
+          "Desarrollo de sistemas de sincronización",
+          "Pruebas en entornos industriales reales",
+          "Optimización de consumo energético y latencia"
+        ],
+        "evidence": [
+          {
+            "type": "Arquitectura edge",
+            "status": "pendiente",
+            "description": "Diseño técnico de sistema distribuido"
+          },
+          {
+            "type": "Modelos optimizados",
+            "status": "pendiente",
+            "description": "Modelos de IA adaptados para ejecución edge"
+          },
+          {
+            "type": "Casos de uso validados",
+            "status": "pendiente",
+            "description": "Resultados de pruebas en entornos reales"
+          }
+        ],
+        "tracking": {
+          "status": "En definición",
+          "progress": "0%",
+          "nextMilestone": "Completar diseño de arquitectura edge",
+          "lastUpdate": "Pendiente de primera actualización"
+        }
+      }
+    ]
   }
 }
