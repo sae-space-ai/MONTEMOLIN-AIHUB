@@ -6,6 +6,7 @@ import Technology from './pages/Technology';
 import Security from './pages/Security';
 import Investment from './pages/Investment';
 import Commercial from './pages/Commercial';
+import Modules from './pages/Modules';
 import Continuity from './pages/Continuity';
 import Vision from './pages/Vision';
 import Transparency from './pages/Transparency';
@@ -21,6 +22,7 @@ function App() {
           <Route path="seguridad" element={<Security />} />
           <Route path="inversion" element={<Investment />} />
           <Route path="comercializacion" element={<Commercial />} />
+          <Route path="modulos" element={<Modules />} />
           <Route path="continuidad" element={<Continuity />} />
           <Route path="vision" element={<Vision />} />
           <Route path="transparencia" element={<Transparency />} />

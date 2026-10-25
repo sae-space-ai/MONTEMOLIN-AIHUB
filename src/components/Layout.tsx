@@ -40,6 +40,7 @@ export default function Layout() {
     { to: '/seguridad', label: 'Seguridad' },
     { to: '/inversion', label: 'Inversión' },
     { to: '/comercializacion', label: 'Comercialización' },
+    { to: '/modulos', label: 'Módulos' },
     { to: '/continuidad', label: 'Continuidad' },
     { to: '/vision', label: 'Visión' },
     { to: '/transparencia', label: 'Transparencia' },
