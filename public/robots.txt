@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /.github/
+
+# Sitemap
+# Sitemap: https://example.com/sitemap.xml
+# Nota: Descomentar y actualizar con dominio real cuando esté registrado
+
+# El sitio es una SPA con HashRouter
+# Todo el contenido es accesible desde index.html

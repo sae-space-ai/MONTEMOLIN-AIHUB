@@ -148,8 +148,13 @@ export default function Home() {
               <div className="text-xs font-bold text-green-primary uppercase tracking-wide">{product.tag}</div>
               <h3 className="font-bold text-black-deep mt-2">{product.name}</h3>
               <p className="text-sm text-gray-600 mt-2">{product.text}</p>
-              <div className="mt-3 text-xs bg-warning-bg text-warning-text px-2 py-1 rounded inline-block">
-                {product.status}
+              <div className="mt-3 flex flex-wrap gap-1">
+                <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded uppercase font-semibold">
+                  {product.maturity}
+                </span>
+              </div>
+              <div className="mt-2 text-xs text-warning-text italic">
+                {product.evidenceStatus}
               </div>
             </article>
           ))}
@@ -180,6 +185,14 @@ export default function Home() {
               </li>
             ))}
           </ul>
+          <div className="mt-6">
+            <Link to="/transparencia" className="text-green-secondary font-semibold hover:underline inline-flex items-center gap-1">
+              Ver transparencia completa
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
 
